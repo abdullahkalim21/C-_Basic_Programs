@@ -6,7 +6,7 @@ using namespace std;
     You can copy the program code and run it in your own file (I'll recommend you to copy the code to not get into more complications)
 */
 // 4 Arithmetic Operations of 2 Numbers
-/*
+
 int main() {
     int x, y, sum, sub, pro;
     float div;
@@ -22,10 +22,10 @@ int main() {
     cout << "Product (*) is: " << pro << endl;
     div = x / y;
     cout << "Division (/) is: " << div << endl;
-} */
+}
 
 // Product of Numbers
-/*
+
 int main() {
     int x, y;
     int product;
@@ -35,10 +35,10 @@ int main() {
     cin >> y;
     product = x * y;
     cout << "Product of two numbers is: " << product;
-} */
+}
 
 // Subtraction of Numbers
-/*
+
 int main() {
     int a, b;
     int sub;
@@ -48,10 +48,10 @@ int main() {
     cin >> b;
     sub = a - b;
     cout << "Subtraction of two numbers is: " << sub;
-} */
+}
 
 // If-Else Function
-/*
+
 int main() {
     float marks;
     cout << "Enter your marks: ";
@@ -63,10 +63,10 @@ int main() {
         cout << "Fail" << endl;
       }
     return 0;
-} */
+}
 
 // Greater between two Integers
-/*
+
 int main() {
     int a, b;
     cout << "Enter first integer: ";
@@ -80,10 +80,10 @@ int main() {
             cout << "Greater number is: " << b << endl;
         }
     return 0;
-}*/
+}
 
 //Swaping two numbers with 3 variable containers
-/*
+
 int main() {
     int x, y, z;
     cout << "First input X: ";
@@ -94,10 +94,10 @@ int main() {
     x = y;  // Value of y is assigned to x 
     y = z;  // Value of z is assigned to y that was actual value of x & now the value of z is empty/nothing
     cout << "Swapped numbers are: \n X= " << x << " \n Y= " << y;
-} */
+}
 
 // Swaping two numbers with SWAP function
-/*
+
 int main() {
     int x, y;
     cout << "Enter the value for x: ";
@@ -107,20 +107,20 @@ int main() {
     cout << "Before swapping: x = " << x << " y = " << y << endl;
     swap(x, y);  // It's a pre-built function for swaping values
     cout << "After swapping: x = " << x << " y = " << y << endl;
-} */
+}
 
 // Area of a circle
-/*
+
 int main() {
     float radius;
     cout << "Enter the radius of the circle: ";
     cin >> radius;
     float area = 3.14 * radius * radius;
     cout << "Area of the circle is: " << area << endl;
-} */
+}
 
 // Students Result Card
-/*
+
 int main () {
     int rollNum;
     float math, phy, chem, eng, comp, obtainedMarks, percentage;  //float is used because value can be in points (like 60.3)
@@ -155,10 +155,10 @@ int main () {
     cout << "Obtained Marks: " << obtainedMarks << endl;
     percentage = (obtainedMarks / 500) * 100;  // Calculating Percentage
     cout << "Percentage: " << percentage << "%";
-} */
+}
 
 // Table of an Integer using for loop
-/*
+
 int main () {
     int number, multiplier;
     cout << "Please enter a number: " << endl;
@@ -166,10 +166,10 @@ int main () {
     for (multiplier = 1; multiplier <= 10; multiplier++) {  // multiplier starts from 1 and goes upto 10
         cout << number << " * " << multiplier << " = " << (number * multiplier) << endl;
     }
-} */
+}
 
 // Table of an Integer with manually writing till 10
-/*
+
 int main () {
     int number;
     cout << "Please enter a number: " << endl;
@@ -184,10 +184,10 @@ int main () {
     cout << number << " * 8 = " << (number * 8) << endl;
     cout << number << " * 9 = " << (number * 9) << endl;
     cout << number << " * 10 = " << (number * 10) << endl;
-} */
+}
 
 // Reverse of 3 digits
-/*
+
 int main() {
     int n, a, b;
     cout << "Enter a three digit number: ";
@@ -198,10 +198,10 @@ int main() {
     n = n % 10;
     cout << "Reverse is " << n << b << a << endl;
     return 0;
-} */
+}
 
 // Reverse of 4 digits simple
-/*
+
 int main() {
     int n, a, b, c;
     cout << "Enter a four digit number: ";
@@ -214,10 +214,10 @@ int main() {
     n = n % 10;
     cout << "Reverse is " << n << c << b << a << endl;
     return 0;
-}*/
+}
 
 // Sepration, Reverse, & Increment of 4 digits
-/*
+
 int main() {
     int num, a, b, c, d;
     cout << "Enter a four digit number: ";
@@ -233,10 +233,10 @@ int main() {
     // cout << d << "\t" << c << "\t" << b << "\t" << a ;  // Displays each digit in reverse
     // cout << ++a << "\t" << ++b << "\t" << ++c << "\t" << ++d ;  //Increments each digit by 1
     return 0;
-}*/
+}
 
 // Salary Increment of Employees
-/*
+
 int main() {
     int grade;
     double salary, bonus;
@@ -255,10 +255,10 @@ int main() {
             cout << "Your Salary is " << salary;
         }
     return 0;
-} */
+}
 
 // Displaying Equal Numbers
-/*
+
 int main () {
     float a, b, c;
     cout << "Enter three numbers: ";
@@ -276,10 +276,10 @@ int main () {
             cout << "The numbers are not equal";
         }
     return 0;
-}*/
+}
 
 // Dial Menu for Students to calculate Percentage & Grade
-/*
+
 int main() {
     int obtainedMarks, totalMarks, percentage, response;
     string grade;
@@ -322,10 +322,10 @@ int main() {
             cout << "Your grade is: " << grade << endl;  // It just displays Grades
         }
     return 0;
-} */
+}
 
 // Celsius to Fahrenheit
-/*
+
 int main() {
     float cel, fah;
     cout << "Enter temperature in Celsius: ";
@@ -333,61 +333,61 @@ int main() {
     fah = (1.8 * cel) + 32;
     cout << cel << " degrees Celsius is " << fah << " degrees Fahrenheit." << endl;
     return 0;
-} */
+}
 
 // Distance Calculator Kilometre to Miles
-/*
+
 int main () {
     float km, miles;  
     cout << "Enter distance in Kilometres: ";
     cin >> km;
     miles = km * 0.62;
     cout << "Distance in Miles: " << miles << endl;
-}*/
+}
 
 // Distance Calculator Miles to Kilometres
-/*
+
 int main () {
     float km, miles;
     cout << "Enter distance in Miles: ";
     cin >> miles;
     km = miles* 1.61;
     cout << "Distance in Kilometres: " << km << endl;
-} */
+}
 
 // Age in months
-/*
+
 int main () {
     int ageInYears, ageInMonths;
     cout << "Enter your age in years: ";
     cin >> ageInYears;
     ageInMonths = ageInYears * 12;
     cout << "You're " << ageInMonths << " months old" << endl;
-}*/
+}
 
 // Age in Days
-/*
+
 int main () {
     int ageInYears, ageInDays;
     cout << "Enter your age in years: ";
     cin >> ageInYears;
     ageInDays = ageInYears * 365;
     cout << "You're " << ageInDays << " days old" << endl;
-} */
+}
 
 // Light years to Astronomical units
 // Astronomical Units is distance from earth to sun (about 150M km/93M miles)
-/*
+
 int main () {
     double lightYears, astroUnits;
     cout << "Enter the numbers of light years: ";
     cin >> lightYears;
     astroUnits = lightYears * 63240;
     cout << lightYears << " light years = " << astroUnits << " astronomical units." ;
-} */
+}
 
 // Calculate Hours, Minutes & Seconds into Seconds
-/*
+
 int main()
 {
   int hours, minutes, seconds;
@@ -400,10 +400,10 @@ int main()
   int total_seconds = (hours * 3600) + (minutes * 60) + seconds;
   cout << "Total seconds: " << total_seconds << endl;
   return 0;
-} */
+}
 
 // Displaying greater and smaller or equal number among 3 integers input by user
-/*
+
 int main() {
     int a, b, c, max, min;
     cout << "Enter three integer values: \n";
@@ -425,10 +425,10 @@ int main() {
     cout << "Maximum value is : " << max << endl;   // Maximum Value is displayed
     cout << "Minimum value is : " << min << endl;   // Minimum Value is displayed
     return 0;
-} */
+}
 
 // Find Quotient & Remainder
-/*
+
 int main() {
     int num1, num2;
     float quotient, remainder;
@@ -447,10 +447,10 @@ int main() {
             cout << "Your second number must not be 0." << endl;
         }
     return 0;
-} */
+}
 
 // Find size of int, float, double & char in your system
-/*
+
 int main() {
     // These sizeof() functions are built-in functions
     cout << "Size of int: " << sizeof(int) << " bytes" << endl;
@@ -458,10 +458,10 @@ int main() {
     cout << "Size of double: " << sizeof(double) << " bytes" << endl;
     cout << "Size of char: " << sizeof(char) << " bytes" << endl;
     return 0;
-} */
+}
 
 // Sum & Average of different Data types
-/*
+
 int main() {
     int a, b, c;
     float d, average;
@@ -477,4 +477,4 @@ int main() {
     average = (a + b + c + d + e) / 5;
     cout << "Average = " << average << endl;
     return 0;
-} */
+}
