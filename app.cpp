@@ -5,17 +5,23 @@ using namespace std;
     OR
     You can copy the program code and run it in your own file (I'll recommend you to copy the code to not get into more complications)
 */
-// Sum of Numbers
+// 4 Arithmetic Operations of 2 Numbers
 /*
 int main() {
-    int x,y;
-    int sum;
+    int x, y, sum, sub, pro;
+    float div;
     cout << "Input first number: ";
     cin >> x;
     cout << "Input second number: ";
     cin >> y;
     sum = x + y;
-    cout << "Sum is: " << sum;
+    cout << "Sum (+) is: " << sum << endl;
+    sub = x - y;
+    cout << "Subtraction (-) is: " << sub << endl;
+    pro = x * y;
+    cout << "Product (*) is: " << pro << endl;
+    div = x / y;
+    cout << "Division (/) is: " << div << endl;
 } */
 
 // Product of Numbers
@@ -192,7 +198,7 @@ int main() {
     n = n % 10;
     cout << "Reverse is " << n << b << a << endl;
     return 0;
-}*/
+} */
 
 // Reverse of 4 digits simple
 /*
@@ -324,10 +330,10 @@ int main() {
     float cel, fah;
     cout << "Enter temperature in Celsius: ";
     cin >> cel;
-    fah = (1.8 * cal) + 32;
-    cout << cel << " degrees Celsius is " << fah << " degrees Fahrenheit.";
+    fah = (1.8 * cel) + 32;
+    cout << cel << " degrees Celsius is " << fah << " degrees Fahrenheit." << endl;
     return 0;
-} */ 
+} */
 
 // Distance Calculator Kilometre to Miles
 /*
@@ -378,4 +384,97 @@ int main () {
     cin >> lightYears;
     astroUnits = lightYears * 63240;
     cout << lightYears << " light years = " << astroUnits << " astronomical units." ;
+} */
+
+// Calculate Hours, Minutes & Seconds into Seconds
+/*
+int main()
+{
+  int hours, minutes, seconds;
+  cout << "\n\nEnter hours: ";
+  cin >> hours;
+  cout << "Enter minutes: ";
+  cin >> minutes;
+  cout << "Enter seconds: ";
+  cin >> seconds;
+  int total_seconds = (hours * 3600) + (minutes * 60) + seconds;
+  cout << "Total seconds: " << total_seconds << endl;
+  return 0;
+} */
+
+// Displaying greater and smaller or equal number among 3 integers input by user
+/*
+int main() {
+    int a, b, c, max, min;
+    cout << "Enter three integer values: \n";
+    cin >> a >> b >> c;
+    if(a >= b && a >= c){
+        max = a;            // If a is greater than b & c then max value is a
+        } else if(b >= a && b >= c){
+            max = b;        // If b is greater than a & c then max value is b
+            }else{
+                max = c;    // otherwise max value is c
+                }
+    if(a <= b && a <= c){
+        min = a;            // If a is smaller than b & c then min value is a
+        } else if(b <= a && b <= c){
+            min = b;        // If b is smaller than a & c then min value is b
+            }else{
+                min = c;    // otherwise min value is c
+                }
+    cout << "Maximum value is : " << max << endl;   // Maximum Value is displayed
+    cout << "Minimum value is : " << min << endl;   // Minimum Value is displayed
+    return 0;
+} */
+
+// Find Quotient & Remainder
+/*
+int main() {
+    int num1, num2;
+    float quotient, remainder;
+    cout << "Enter first number: ";
+    cin >> num1;
+    cout << "Enter second number: ";
+    cin >> num2;
+
+    if (num2 != 0) {            // if num2 is not equal to 0 then it calculates & displays quotient & remainder
+            quotient = num1 / num2;
+            cout << "Quotient: " << quotient << endl;
+            remainder = num1 % num2;
+            cout << "Remainder: " << remainder << endl;
+        }
+        else {      // if num2 is equal to 0 then it displays this message
+            cout << "Your second number must not be 0." << endl;
+        }
+    return 0;
+} */
+
+// Find size of int, float, double & char in your system
+/*
+int main() {
+    // These sizeof() functions are built-in functions
+    cout << "Size of int: " << sizeof(int) << " bytes" << endl;
+    cout << "Size of float: " << sizeof(float) << " bytes" << endl;
+    cout << "Size of double: " << sizeof(double) << " bytes" << endl;
+    cout << "Size of char: " << sizeof(char) << " bytes" << endl;
+    return 0;
+} */
+
+// Sum & Average of different Data types
+/*
+int main() {
+    int a, b, c;
+    float d, average;
+    double e, sum;
+    cout << "Enter 3 integers: " ;
+    cin >> a >> b >> c;
+    cout << "Enter 1 Floating number: ";
+    cin >> d;
+    cout << "Enter 1 double: ";
+    cin >> e;
+    sum = a + b + c + d + e;
+    cout << "Sum = " << sum << endl;
+    average = (a + b + c + d + e) / 5;
+    cout << "Average = " << average << endl;
+    return 0;
 } */
