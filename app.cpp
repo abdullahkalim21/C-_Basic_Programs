@@ -314,6 +314,20 @@ int main() {
     cout << "Enter 1 to calculate percentage \nEnter 2 to display grade" << endl;  // This is the dial menu for the user to respond
     cin >> response;
 
+    // Using Switch statement on the basis of Dial Menu response by user
+    switch (response) {
+        case 1:
+            cout << "Your percentage is " << percentage << "%" << endl;
+            break;
+            case 2:
+            cout << "Your grade is: " << grade << endl;
+            break;
+        
+        default:
+            cout << "Invalid Input!" << endl;
+            break;
+        }
+
     // If--else function on the basis of Dial Menu response by user
     if (response == 1) {
         cout << "Your percentage is " << percentage << endl;  // It just Prints Percentage
@@ -476,5 +490,58 @@ int main() {
     cout << "Sum = " << sum << endl;
     average = (a + b + c + d + e) / 5;
     cout << "Average = " << average << endl;
+    return 0;
+}
+
+// Display Square of Natural numbers
+
+int main() {
+    int i = 1, n = 1;
+    while (i < 10) {
+        n = i * i;
+        cout << n << endl;
+        i++;
+    }
+    return 0;
+}
+
+// Display maximum number from five different numbers input from user
+
+int main() {
+    int a, b, c, d, e, max;
+    cout << "Enter five different integer values: ";
+    cin >> a >> b >> c >> d >> e;
+    if(a > b && a > c && a > d && a > e){
+        max = a;    // If a has higher value then max is assigned value of a
+        } else if(b > a && b > c && b > d && b > e){
+            max = b;    // If b has higher value then max is assigned value of b
+            }else if (c > a && c > b && c > d && c > e){
+                max = c;    // If c has higher value then max is assigned value of c
+                }
+                else if (d > a && d > b && d > c && d > e) {
+                    max = d;    // If d has higher value then max is assigned value of d
+                }
+                else{
+                    max = e;    // Else the max is assigned value of e
+                }
+    cout << "Maximum value is: " << max << endl;    // Maximum value is displayed
+    return 0;
+}
+
+// get one ASCII value from user and display next five symbols of ASCII values without using loop
+
+int main() {
+  int asciiValue;
+    cout << "Enter an ASCII value: ";
+    cin >> asciiValue;      // Gets number input
+    char currentChar = asciiValue;      // Current ASCII character with user's given value is evaluated
+    char char1 = asciiValue + 1;        // given value has addition of 1 & assigned the relevent ASCII character
+    char char2 = asciiValue + 2;        // given value has addition of 2 & assigned the relevent ASCII character
+    char char3 = asciiValue + 3;        // given value has addition of 3 & assigned the relevent ASCII character
+    char char4 = asciiValue + 4;        // given value has addition of 4 & assigned the relevent ASCII character
+    char char5 = asciiValue + 5;        // given value has addition of 5 & assigned the relevent ASCII character
+    cout << "The current character: " << currentChar << endl;       // Current value's ASCII character is displayed
+    cout << "Next 5 values are: " << char1 << "\t" << char2 << "\t" << char3 << "\t" << char4 << "\t" << char5 << endl;
+    // Next 5 characters from current character are displayed
     return 0;
 }
