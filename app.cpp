@@ -797,3 +797,19 @@ int main() {
     }
     return 0;
 }
+
+// Display Fibonacci numbers till 500
+
+int main() {
+    int first = 0, second = 1, next;
+    cout << "Fibonacci Series till 500:\n";
+    cout << first << "\n" << second << "\n";
+    next = first + second;
+    while (next <= 500) {
+        cout << next << "\n";
+        first = second;
+        second = next;
+        next = first + second;
+    }
+    return 0;
+}
