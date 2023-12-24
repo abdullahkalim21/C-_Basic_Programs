@@ -545,3 +545,255 @@ int main() {
     // Next 5 characters from current character are displayed
     return 0;
 }
+
+// Write a program that reverses a number using a while loop
+
+
+int main() {
+    // Declare variables
+    int number, reversedNumber = 0, remainder;
+    // Input: Get a number from the user
+    cout << "Enter a number: ";
+    cin >> number;
+    // Reverse the number using a while loop
+    while (number != 0) {
+        remainder = number % 10;
+        reversedNumber = reversedNumber * 10 + remainder;
+        number /= 10;
+
+        // Don't put this line here (it shows different result)
+        // cout << "Reversed number: " << reversedNumber << endl;
+    }
+    // Output: Display the reversed number
+    cout << "Reversed number: " << reversedNumber << endl;
+
+    return 0;
+}
+
+// Write a multiplication table that take input from user using while loop
+
+int main() {
+    // Declare variables
+    int number, i = 1;
+
+    // Input: Get a number from the user
+    cout << "Enter a number: ";
+    cin >> number;
+
+    // Output: Display the multiplication table using a while loop
+    cout << "Multiplication Table for " << number << ":\n";
+    while (i <= 10) {
+        cout << number << " x " << i << " = " << (number * i) << endl;
+        i++;
+    }
+
+    return 0;
+}
+
+// Write a program that shows even or odd number using while loop
+
+int main() {
+    // Declare variables
+    int number;
+
+    // Input: Get a number from the user
+    cout << "Enter a number: ";
+    cin >> number;
+
+    // Determine if the number is even or odd using a while loop
+    while (number != 0) {
+        if (number % 2 == 0) {
+            cout << number << " is an even number." << endl;
+        } else {
+            cout << number << " is an odd number." << endl;
+        }
+
+        // Input: Get the next number or 0 to exit the program
+        cout << "Enter another number (or 0 to exit): ";
+        cin >> number;
+    }
+
+    return 0;
+}
+
+// Uses a while loop to calculate the sum of numbers from 1 to a user-defined limit
+
+int main() {
+    // Declare variables
+    int limit, currentNumber = 1, sum = 0;
+
+    // Input: Get a limit from the user
+    cout << "Enter a limit: ";
+    cin >> limit;
+
+    // Calculate the sum of numbers from 1 to the user-defined limit using a while loop
+    while (currentNumber <= limit) {
+        sum = sum + currentNumber;
+        currentNumber++;
+
+        // Don't put this line here (it shows different result)
+        // cout << "The sum of numbers from 1 to " << limit << " is: " << sum << endl;
+    }
+
+    // Output: Display the sum
+    cout << "The sum of numbers from 1 to " << limit << " is: " << sum << endl;
+
+    return 0;
+} 
+
+// Factorial of a number
+
+int main() {
+    // Declare variables
+    int number, factorial = 1, i = 1;
+
+    // Input: Get a number from the user
+    cout << "Enter a number: ";
+    cin >> number;
+
+    // Calculate the factorial of the number using a while loop
+    while (i <= number) {
+        factorial = factorial * i;
+        i++;
+    }
+
+    // Output: Display the factorial
+    cout << "The factorial of " << number << " is: " << factorial << endl;
+
+    return 0;
+}
+
+// Find the fourth power of numb using While Loop
+
+int main() {
+    int limit;
+    // Declare variables
+    int i = 1;
+    cout << "Enter a limit: ";
+    cin >> limit;
+    // Calculate the fourth power using a while loop
+    while (i <= limit) {
+        int result = i*i*i*i;
+        cout << result << endl;
+        i++;
+    }
+
+    return 0;
+}
+
+// The user enters numbers, and the loop continues until 0 is entered, at which point the loop and the program terminate.
+
+int main() {
+    int number;
+
+    cout << "Enter numbers (enter 0 to terminate):\n";
+    cin >> number;
+
+    while (number != 0) {
+        // Process the entered number (you can perform additional actions here)
+        // For this example, the program simply echoes the entered number
+        cout << "You entered: " << number << endl;
+
+        // Get the next number
+        cin >> number;
+    }
+
+    // Output: Display a message indicating the end of the program
+    cout << "Program terminated. 0 was entered.\n";
+
+    return 0;
+}
+
+// Display first 10 natural numbers
+
+int main() {
+    int i = 1;
+    while (i <= 10)
+    {
+        cout << "The natural numbers are: " << i << endl;
+        i++;
+    }
+    return 0;
+}
+
+// Display first 10 natural numbers and their sum
+// 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+// Sumof first 10 natural numbers = 55
+
+int main() {
+    int i = 1, sum = 0;
+    while (i <= 10)
+    {
+        cout << "The natural numbers are: " << i << endl;
+        sum = sum + i;
+        i++;
+    }
+        cout << "The sum of first 10 natural numbers: " << sum << endl;
+    return 0;
+}
+
+// Get a number from user and display whether it's prime number or not (you can use loop)
+
+int main() {
+    int num, i, count = 0;
+    cout << "Enter a number: ";
+    cin >> num;
+
+    for (i = 2; i <= num / 2; ++i) {
+        if (num % i == 0) {
+            count++;
+            }
+        }
+            if (count > 0)
+            cout << "\n" << num << " is not a prime number.";
+            else
+            cout << "\n" << num << " is a prime number.";
+    return 0;
+}
+
+// Get a number from user and display it's factorial using while loop
+
+int main() {
+    int number, factorial = 1, i = 1;
+    cout << "Enter a number: ";
+    cin >> number;
+    while (i <= number) {
+        factorial = factorial * i;
+        i++;
+    }
+    cout << "The factorial of " << number << " is: " << factorial << endl;
+    return 0;
+}
+
+// Get three/four digits number from user and display it's sum like 123, sum = 6
+
+int main() {
+    int dig, dig1, dig2, sum;
+    cout << "Enter 3 digit number: ";
+    cin >> dig;
+    dig1 = dig / 100;
+    dig = dig % 100;
+    dig2 = dig / 10;
+    dig = dig % 10;
+    sum = dig + dig1 + dig2;
+    cout << "Sum of digits = " << sum;
+    return 0;
+}
+
+// Get two numbers & display sum using while loop and ask the user if he/she wants to again sum two numbers
+
+int main() {
+    int choice, num1, num2, sum;
+    cout << "Enter 1 to calculate another sum (0 to terminate)";
+    cin >> choice;
+    while (choice == 1) {
+        cout << "Enter two numbers: ";
+        cin >> num1 >> num2;
+        sum = num1 + num2;
+        cout << "Sum = " << sum << endl;
+
+        cout << "Enter 1 to calculate another sum (0 to terminate)";
+        cin >> choice;
+    }
+    return 0;
+}
