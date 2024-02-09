@@ -860,18 +860,6 @@ int main()
     return 0;
 }
 
-// Diaplay n terms of even numbers and their sum using do-while loop
-
-int main() {
-    int n, sum;
-    cout << "Enter the number of elements: ";
-    cin >> n;
-    do {
-        if ((n % 2) == 0) {
-        }
-    }
-}
-
 // Sum of digits of a number
 
 int main() {
