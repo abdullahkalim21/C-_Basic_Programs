@@ -813,3 +813,136 @@ int main() {
     }
     return 0;
 }
+
+// Dairy Farm Calculation (Milk production and profit)
+
+int main() {
+    double totalMilkProd, cartonsReq, totalExpense,profit;
+    cout << "Enter the amount of milk produced today morning(in Liters): ";
+    cin >> totalMilkProd;
+    cartonsReq = totalMilkProd / 3.78;
+    totalExpense = totalMilkProd * 0.78;
+    profit = cartonsReq * 0.7;
+    cout << "Cartons Required: " << cartonsReq << endl;
+    cout << "Total Expense: $" << totalExpense << endl;
+    cout << "Total Profit: $" << profit << endl;
+    return 0;
+    }
+
+// Retail Discount on Customer Type
+
+int main()
+{
+    int cusType;
+    double purchaseAmount, payableAmount, discount;
+    cout << "Total purchase amount: ";
+    cin >> purchaseAmount;
+    cout << "Type of Customer:\n1 for Regular Customers\n2 for Premium Customers\n3 for VIP Customers ";
+    cin >> cusType;
+    switch (cusType)
+    {
+    case 1:
+        discount = (purchaseAmount * 10) / 100;
+        break;
+    case 2:
+        discount = (purchaseAmount * 15) / 100;
+        break;
+    case 3:
+        discount = (purchaseAmount * 20) / 100;
+        break;
+    default:
+        discount = 0;
+    }
+    payableAmount = purchaseAmount - discount;
+    cout << "Total Purchase: $" << purchaseAmount << endl;
+    cout << "Discount: $" << discount << endl;
+    cout << "Total Payable: $" << payableAmount << endl;
+    return 0;
+}
+
+// Diaplay n terms of even numbers and their sum using do-while loop
+
+int main() {
+    int n, sum;
+    cout << "Enter the number of elements: ";
+    cin >> n;
+    do {
+        if ((n % 2) == 0) {
+        }
+    }
+}
+
+// Sum of digits of a number
+
+int main() {
+    int num, sum = 0;
+    cout << "Enter a number: ";
+    cin >> num;
+    do {
+        sum += num % 10;
+        num /= 10;
+    } while (num > 0);
+    cout << "Sum = " << sum << endl;
+    return 0;
+}
+
+// Whether the character is Vowel or Consonant
+
+int main() {
+    char ch;
+    cout << "Enter a Character: ";
+    cin >> ch;
+    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+         cout << ch << " is Vowel.";
+        } else {
+            cout << ch << " is Consonant.";
+        }
+    return 0;
+}
+
+// Find number of vowels, digits, consonants and white spaces in a string
+
+int main() {
+    int vowels = 0, digits = 0, consonants = 0, white_spaces = 0;
+    string str;
+    cout << "Enter a string: ";
+    getline(cin, str);
+
+
+    for (int i = 0; i < str.length(); i++) {
+        char c = str[i];
+
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') {
+            vowels++;
+        } else if (str[i]>= '0' && str[i] <= '9') {
+            digits++;
+        } else if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')) {
+            consonants++;
+        } else if (str[i] == ' ') {
+            white_spaces++;
+        }
+    }
+
+    cout << "Number of vowels : " << vowels << endl;
+    cout << "Number of digits : " << digits << endl;
+    cout << "Number of constants : " << constants << endl;
+    cout << "Number of white spaces : " << white_spaces << endl;
+
+    return 0;
+}
+
+// Display Fibonacci numbers till 500
+
+int main() {
+    int first = 0, second = 1, next;
+    cout << "Fibonacci Series till 500:\n";
+    cout << first << "\n" << second << "\n";
+    next = first + second;
+    while (next <= 500) {
+        cout << next << "\n";
+        first = second;
+        second = next;
+        next = first + second;
+    }
+    return 0;
+}
