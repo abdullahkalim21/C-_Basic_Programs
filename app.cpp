@@ -925,7 +925,7 @@ int main() {
 
     cout << "Number of vowels : " << vowels << endl;
     cout << "Number of digits : " << digits << endl;
-    cout << "Number of constants : " << constants << endl;
+    cout << "Number of consonants : " << consonants << endl;
     cout << "Number of white spaces : " << white_spaces << endl;
 
     return 0;
