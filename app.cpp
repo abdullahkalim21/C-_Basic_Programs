@@ -7,7 +7,8 @@ using namespace std;
 */
 // 4 Arithmetic Operations of 2 Numbers
 
-int main() {
+int main()
+{
     int x, y, sum, sub, pro;
     float div;
     cout << "Input first number: ";
@@ -26,7 +27,8 @@ int main() {
 
 // Product of Numbers
 
-int main() {
+int main()
+{
     int x, y;
     int product;
     cout << "Enter the first number: ";
@@ -39,7 +41,8 @@ int main() {
 
 // Subtraction of Numbers
 
-int main() {
+int main()
+{
     int a, b;
     int sub;
     cout << "Enter the first number: ";
@@ -52,66 +55,75 @@ int main() {
 
 // If-Else Function
 
-int main() {
+int main()
+{
     float marks;
     cout << "Enter your marks: ";
     cin >> marks;
-    if (marks >= 50) {
+    if (marks >= 50)
+    {
         cout << "Pass" << endl;
     }
-      else {
+    else
+    {
         cout << "Fail" << endl;
-      }
+    }
     return 0;
 }
 
 // Greater between two Integers
 
-int main() {
+int main()
+{
     int a, b;
     cout << "Enter first integer: ";
     cin >> a;
     cout << "Enter second integer: ";
     cin >> b;
-    if (a > b) {
+    if (a > b)
+    {
         cout << "Greater number is: " << a << endl;
-        }
-        else {
-            cout << "Greater number is: " << b << endl;
-        }
+    }
+    else
+    {
+        cout << "Greater number is: " << b << endl;
+    }
     return 0;
 }
 
-//Swaping two numbers with 3 variable containers
+// Swaping two numbers with 3 variable containers
 
-int main() {
+int main()
+{
     int x, y, z;
     cout << "First input X: ";
     cin >> x;
     cout << "Second input Y: ";
     cin >> y;
-    z = x;  // Value of x is assigned to z
-    x = y;  // Value of y is assigned to x 
-    y = z;  // Value of z is assigned to y that was actual value of x & now the value of z is empty/nothing
+    z = x; // Value of x is assigned to z
+    x = y; // Value of y is assigned to x
+    y = z; // Value of z is assigned to y that was actual value of x & now the value of z is empty/nothing
     cout << "Swapped numbers are: \n X= " << x << " \n Y= " << y;
 }
 
 // Swaping two numbers with SWAP function
 
-int main() {
+int main()
+{
     int x, y;
     cout << "Enter the value for x: ";
     cin >> x;
     cout << "Enter the value for y: ";
     cin >> y;
     cout << "Before swapping: x = " << x << " y = " << y << endl;
-    swap(x, y);  // It's a pre-built function for swaping values
+    swap(x, y); // It's a pre-built function for swaping values
     cout << "After swapping: x = " << x << " y = " << y << endl;
 }
 
 // Area of a circle
 
-int main() {
+int main()
+{
     float radius;
     cout << "Enter the radius of the circle: ";
     cin >> radius;
@@ -121,9 +133,10 @@ int main() {
 
 // Students Result Card
 
-int main () {
+int main()
+{
     int rollNum;
-    float math, phy, chem, eng, comp, obtainedMarks, percentage;  //float is used because value can be in points (like 60.3)
+    float math, phy, chem, eng, comp, obtainedMarks, percentage; // float is used because value can be in points (like 60.3)
     string name, fatherName;
     // Input from user
     cout << "Enter your name: ";
@@ -151,26 +164,29 @@ int main () {
     cout << "Chemistry Marks: " << chem << endl;
     cout << "English Marks: " << eng << endl;
     cout << "Computer Science Marks: " << comp << endl;
-    obtainedMarks = math + phy + chem + eng + comp;  // Calculating Total Marks
+    obtainedMarks = math + phy + chem + eng + comp; // Calculating Total Marks
     cout << "Obtained Marks: " << obtainedMarks << endl;
-    percentage = (obtainedMarks / 500) * 100;  // Calculating Percentage
+    percentage = (obtainedMarks / 500) * 100; // Calculating Percentage
     cout << "Percentage: " << percentage << "%";
 }
 
 // Table of an Integer using for loop
 
-int main () {
+int main()
+{
     int number, multiplier;
     cout << "Please enter a number: " << endl;
     cin >> number;
-    for (multiplier = 1; multiplier <= 10; multiplier++) {  // multiplier starts from 1 and goes upto 10
+    for (multiplier = 1; multiplier <= 10; multiplier++)
+    { // multiplier starts from 1 and goes upto 10
         cout << number << " * " << multiplier << " = " << (number * multiplier) << endl;
     }
 }
 
 // Table of an Integer with manually writing till 10
 
-int main () {
+int main()
+{
     int number;
     cout << "Please enter a number: " << endl;
     cin >> number;
@@ -188,7 +204,8 @@ int main () {
 
 // Reverse of 3 digits
 
-int main() {
+int main()
+{
     int n, a, b;
     cout << "Enter a three digit number: ";
     cin >> n;
@@ -202,7 +219,8 @@ int main() {
 
 // Reverse of 4 digits simple
 
-int main() {
+int main()
+{
     int n, a, b, c;
     cout << "Enter a four digit number: ";
     cin >> n;
@@ -218,7 +236,8 @@ int main() {
 
 // Sepration, Reverse, & Increment of 4 digits
 
-int main() {
+int main()
+{
     int num, a, b, c, d;
     cout << "Enter a four digit number: ";
     cin >> num;
@@ -237,110 +256,130 @@ int main() {
 
 // Salary Increment of Employees
 
-int main() {
+int main()
+{
     int grade;
     double salary, bonus;
     cout << "Enter the employee's grade (12-18): ";
     cin >> grade;
     cout << "Enter the employee's salary: ";
     cin >> salary;
-    if(grade >= 15 && grade <= 18) {
-        bonus = salary * 50 / 100;   // Calculates bonus with 50% increment
-        salary = salary + bonus;    // New salary is 50% Increased
+    if (grade >= 15 && grade <= 18)
+    {
+        bonus = salary * 50 / 100; // Calculates bonus with 50% increment
+        salary = salary + bonus;   // New salary is 50% Increased
         cout << "Your Salary is " << salary;
-        }
-        else if(grade >= 12 && grade < 15) {
-            bonus = salary * 25 / 100;  // Calculates bonus with 25% increment
-            salary = salary + bonus;    // New salary is 25% Increased
-            cout << "Your Salary is " << salary;
-        }
+    }
+    else if (grade >= 12 && grade < 15)
+    {
+        bonus = salary * 25 / 100; // Calculates bonus with 25% increment
+        salary = salary + bonus;   // New salary is 25% Increased
+        cout << "Your Salary is " << salary;
+    }
     return 0;
 }
 
 // Displaying Equal Numbers
 
-int main () {
+int main()
+{
     float a, b, c;
     cout << "Enter three numbers: ";
     cin >> a >> b >> c;
-    if (a == b && a == c) {
+    if (a == b && a == c)
+    {
         cout << "All the numbers are equal.";
-        }
-        else if (a == b) {
-            cout << "1st & 2nd numbers are equal";
-        }
-        else if (a == c) {
-            cout << "1st & 3rd numbers are equal";
-        }
-        else {
-            cout << "The numbers are not equal";
-        }
+    }
+    else if (a == b)
+    {
+        cout << "1st & 2nd numbers are equal";
+    }
+    else if (a == c)
+    {
+        cout << "1st & 3rd numbers are equal";
+    }
+    else
+    {
+        cout << "The numbers are not equal";
+    }
     return 0;
 }
 
 // Dial Menu for Students to calculate Percentage & Grade
 
-int main() {
+int main()
+{
     int obtainedMarks, totalMarks, percentage, response;
     string grade;
     cout << "Enter the obtained marks: ";
     cin >> obtainedMarks;
     cout << "Enter the total marks: ";
     cin >> totalMarks;
-    percentage = (obtainedMarks * 100) / totalMarks;  //Here Percentage is calculated with given Obtained & Total Marks
-    
+    percentage = (obtainedMarks * 100) / totalMarks; // Here Percentage is calculated with given Obtained & Total Marks
+
     // If--else function to get Grades
-    if (percentage >= 90) {
-            grade = "A+";
-        }
-        else if (percentage >= 85) {
-            grade = "A";
-        }
-        else if (percentage >= 80) {
-            grade = "B";
-        }
-        else if (percentage >= 70) {
-            grade = "C";
-        }
-        else if (percentage >= 60) {
-            grade = "D";
-        }
-        else if (percentage >= 50) {
-            grade = "E";
-        }
-        else {
-            grade = "F";
-        }
-    cout << "Enter 1 to calculate percentage \nEnter 2 to display grade" << endl;  // This is the dial menu for the user to respond
+    if (percentage >= 90)
+    {
+        grade = "A+";
+    }
+    else if (percentage >= 85)
+    {
+        grade = "A";
+    }
+    else if (percentage >= 80)
+    {
+        grade = "B";
+    }
+    else if (percentage >= 70)
+    {
+        grade = "C";
+    }
+    else if (percentage >= 60)
+    {
+        grade = "D";
+    }
+    else if (percentage >= 50)
+    {
+        grade = "E";
+    }
+    else
+    {
+        grade = "F";
+    }
+    cout << "Enter 1 to calculate percentage \nEnter 2 to display grade" << endl; // This is the dial menu for the user to respond
     cin >> response;
 
     // Using Switch statement on the basis of Dial Menu response by user
-    switch (response) {
-        case 1:
-            cout << "Your percentage is " << percentage << "%" << endl;
-            break;
-            case 2:
-            cout << "Your grade is: " << grade << endl;
-            break;
-        
-        default:
-            cout << "Invalid Input!" << endl;
-            break;
-        }
+    switch (response)
+    {
+    case 1:
+        cout << "Your percentage is " << percentage << "%" << endl;
+        break;
+    case 2:
+        cout << "Your grade is: " << grade << endl;
+        break;
+
+    default:
+        cout << "Invalid Input!" << endl;
+        break;
+    }
 
     // If--else function on the basis of Dial Menu response by user
-    if (response == 1) {
-        cout << "Your percentage is " << percentage << endl;  // It just Prints Percentage
-        }
-        else if (response == 2) {
-            cout << "Your grade is: " << grade << endl;  // It just displays Grades
-        }
+    if (response == 1)
+    {
+        cout << "Your percentage is " << percentage << endl; // It just Prints Percentage
+    }
+    else if (response == 2)
+    {
+        cout << "Your grade is: " << grade << endl; // It just displays Grades
+    }
     return 0;
 }
 
 // Celsius to Fahrenheit
 
-int main() {
+int main()
+{
     float cel, fah;
     cout << "Enter temperature in Celsius: ";
     cin >> cel;
@@ -351,8 +390,9 @@ int main() {
 
 // Distance Calculator Kilometre to Miles
 
-int main () {
-    float km, miles;  
+int main()
+{
+    float km, miles;
     cout << "Enter distance in Kilometres: ";
     cin >> km;
     miles = km * 0.62;
@@ -361,17 +401,19 @@ int main () {
 
 // Distance Calculator Miles to Kilometres
 
-int main () {
+int main()
+{
     float km, miles;
     cout << "Enter distance in Miles: ";
     cin >> miles;
-    km = miles* 1.61;
+    km = miles * 1.61;
     cout << "Distance in Kilometres: " << km << endl;
 }
 
 // Age in months
 
-int main () {
+int main()
+{
     int ageInYears, ageInMonths;
     cout << "Enter your age in years: ";
     cin >> ageInYears;
@@ -381,7 +423,8 @@ int main () {
 
 // Age in Days
 
-int main () {
+int main()
+{
     int ageInYears, ageInDays;
     cout << "Enter your age in years: ";
     cin >> ageInYears;
@@ -392,58 +435,71 @@ int main () {
 // Light years to Astronomical units
 // Astronomical Units is distance from earth to sun (about 150M km/93M miles)
 
-int main () {
+int main()
+{
     double lightYears, astroUnits;
     cout << "Enter the numbers of light years: ";
     cin >> lightYears;
     astroUnits = lightYears * 63240;
-    cout << lightYears << " light years = " << astroUnits << " astronomical units." ;
+    cout << lightYears << " light years = " << astroUnits << " astronomical units.";
 }
 
 // Calculate Hours, Minutes & Seconds into Seconds
 
 int main()
 {
-  int hours, minutes, seconds;
-  cout << "\n\nEnter hours: ";
-  cin >> hours;
-  cout << "Enter minutes: ";
-  cin >> minutes;
-  cout << "Enter seconds: ";
-  cin >> seconds;
-  int total_seconds = (hours * 3600) + (minutes * 60) + seconds;
-  cout << "Total seconds: " << total_seconds << endl;
-  return 0;
+    int hours, minutes, seconds;
+    cout << "\n\nEnter hours: ";
+    cin >> hours;
+    cout << "Enter minutes: ";
+    cin >> minutes;
+    cout << "Enter seconds: ";
+    cin >> seconds;
+    int total_seconds = (hours * 3600) + (minutes * 60) + seconds;
+    cout << "Total seconds: " << total_seconds << endl;
+    return 0;
 }
 
 // Displaying greater and smaller or equal number among 3 integers input by user
 
-int main() {
+int main()
+{
     int a, b, c, max, min;
     cout << "Enter three integer values: \n";
     cin >> a >> b >> c;
-    if(a >= b && a >= c){
-        max = a;            // If a is greater than b & c then max value is a
-        } else if(b >= a && b >= c){
-            max = b;        // If b is greater than a & c then max value is b
-            }else{
-                max = c;    // otherwise max value is c
-                }
-    if(a <= b && a <= c){
-        min = a;            // If a is smaller than b & c then min value is a
-        } else if(b <= a && b <= c){
-            min = b;        // If b is smaller than a & c then min value is b
-            }else{
-                min = c;    // otherwise min value is c
-                }
-    cout << "Maximum value is : " << max << endl;   // Maximum Value is displayed
-    cout << "Minimum value is : " << min << endl;   // Minimum Value is displayed
+    if (a >= b && a >= c)
+    {
+        max = a; // If a is greater than b & c then max value is a
+    }
+    else if (b >= a && b >= c)
+    {
+        max = b; // If b is greater than a & c then max value is b
+    }
+    else
+    {
+        max = c; // otherwise max value is c
+    }
+    if (a <= b && a <= c)
+    {
+        min = a; // If a is smaller than b & c then min value is a
+    }
+    else if (b <= a && b <= c)
+    {
+        min = b; // If b is smaller than a & c then min value is b
+    }
+    else
+    {
+        min = c; // otherwise min value is c
+    }
+    cout << "Maximum value is : " << max << endl; // Maximum Value is displayed
+    cout << "Minimum value is : " << min << endl; // Minimum Value is displayed
     return 0;
 }
 
 // Find Quotient & Remainder
 
-int main() {
+int main()
+{
     int num1, num2;
     float quotient, remainder;
     cout << "Enter first number: ";
@@ -451,21 +507,24 @@ int main() {
     cout << "Enter second number: ";
     cin >> num2;
 
-    if (num2 != 0) {            // if num2 is not equal to 0 then it calculates & displays quotient & remainder
-            quotient = num1 / num2;
-            cout << "Quotient: " << quotient << endl;
-            remainder = num1 % num2;
-            cout << "Remainder: " << remainder << endl;
-        }
-        else {      // if num2 is equal to 0 then it displays this message
-            cout << "Your second number must not be 0." << endl;
-        }
+    if (num2 != 0)
+    { // if num2 is not equal to 0 then it calculates & displays quotient & remainder
+        quotient = num1 / num2;
+        cout << "Quotient: " << quotient << endl;
+        remainder = num1 % num2;
+        cout << "Remainder: " << remainder << endl;
+    }
+    else
+    { // if num2 is equal to 0 then it displays this message
+        cout << "Your second number must not be 0." << endl;
+    }
     return 0;
 }
 
 // Find size of int, float, double & char in your system
 
-int main() {
+int main()
+{
     // These sizeof() functions are built-in functions
     cout << "Size of int: " << sizeof(int) << " bytes" << endl;
     cout << "Size of float: " << sizeof(float) << " bytes" << endl;
@@ -476,11 +535,12 @@ int main() {
 
 // Sum & Average of different Data types
 
-int main() {
+int main()
+{
     int a, b, c;
     float d, average;
     double e, sum;
-    cout << "Enter 3 integers: " ;
+    cout << "Enter 3 integers: ";
     cin >> a >> b >> c;
     cout << "Enter 1 Floating number: ";
     cin >> d;
@@ -495,9 +555,11 @@ int main() {
 
 // Display Square of Natural numbers
 
-int main() {
+int main()
+{
     int i = 1, n = 1;
-    while (i < 10) {
+    while (i < 10)
+    {
         n = i * i;
         cout << n << endl;
         i++;
@@ -507,40 +569,49 @@ int main() {
 
 // Display maximum number from five different numbers input from user
 
-int main() {
+int main()
+{
     int a, b, c, d, e, max;
     cout << "Enter five different integer values: ";
     cin >> a >> b >> c >> d >> e;
-    if(a > b && a > c && a > d && a > e){
-        max = a;    // If a has higher value then max is assigned value of a
-        } else if(b > a && b > c && b > d && b > e){
-            max = b;    // If b has higher value then max is assigned value of b
-            }else if (c > a && c > b && c > d && c > e){
-                max = c;    // If c has higher value then max is assigned value of c
-                }
-                else if (d > a && d > b && d > c && d > e) {
-                    max = d;    // If d has higher value then max is assigned value of d
-                }
-                else{
-                    max = e;    // Else the max is assigned value of e
-                }
-    cout << "Maximum value is: " << max << endl;    // Maximum value is displayed
+    if (a > b && a > c && a > d && a > e)
+    {
+        max = a; // If a has higher value then max is assigned value of a
+    }
+    else if (b > a && b > c && b > d && b > e)
+    {
+        max = b; // If b has higher value then max is assigned value of b
+    }
+    else if (c > a && c > b && c > d && c > e)
+    {
+        max = c; // If c has higher value then max is assigned value of c
+    }
+    else if (d > a && d > b && d > c && d > e)
+    {
+        max = d; // If d has higher value then max is assigned value of d
+    }
+    else
+    {
+        max = e; // Else the max is assigned value of e
+    }
+    cout << "Maximum value is: " << max << endl; // Maximum value is displayed
     return 0;
 }
 
 // get one ASCII value from user and display next five symbols of ASCII values without using loop
 
-int main() {
-  int asciiValue;
+int main()
+{
+    int asciiValue;
     cout << "Enter an ASCII value: ";
-    cin >> asciiValue;      // Gets number input
-    char currentChar = asciiValue;      // Current ASCII character with user's given value is evaluated
-    char char1 = asciiValue + 1;        // given value has addition of 1 & assigned the relevent ASCII character
-    char char2 = asciiValue + 2;        // given value has addition of 2 & assigned the relevent ASCII character
-    char char3 = asciiValue + 3;        // given value has addition of 3 & assigned the relevent ASCII character
-    char char4 = asciiValue + 4;        // given value has addition of 4 & assigned the relevent ASCII character
-    char char5 = asciiValue + 5;        // given value has addition of 5 & assigned the relevent ASCII character
-    cout << "The current character: " << currentChar << endl;       // Current value's ASCII character is displayed
+    cin >> asciiValue;                                        // Gets number input
+    char currentChar = asciiValue;                            // Current ASCII character with user's given value is evaluated
+    char char1 = asciiValue + 1;                              // given value has addition of 1 & assigned the relevent ASCII character
+    char char2 = asciiValue + 2;                              // given value has addition of 2 & assigned the relevent ASCII character
+    char char3 = asciiValue + 3;                              // given value has addition of 3 & assigned the relevent ASCII character
+    char char4 = asciiValue + 4;                              // given value has addition of 4 & assigned the relevent ASCII character
+    char char5 = asciiValue + 5;                              // given value has addition of 5 & assigned the relevent ASCII character
+    cout << "The current character: " << currentChar << endl; // Current value's ASCII character is displayed
     cout << "Next 5 values are: " << char1 << "\t" << char2 << "\t" << char3 << "\t" << char4 << "\t" << char5 << endl;
     // Next 5 characters from current character are displayed
     return 0;
@@ -548,15 +619,16 @@ int main() {
 
 // Write a program that reverses a number using a while loop
 
-
-int main() {
+int main()
+{
     // Declare variables
     int number, reversedNumber = 0, remainder;
     // Input: Get a number from the user
     cout << "Enter a number: ";
     cin >> number;
     // Reverse the number using a while loop
-    while (number != 0) {
+    while (number != 0)
+    {
         remainder = number % 10;
         reversedNumber = reversedNumber * 10 + remainder;
         number /= 10;
@@ -572,7 +644,8 @@ int main() {
 
 // Write a multiplication table that take input from user using while loop
 
-int main() {
+int main()
+{
     // Declare variables
     int number, i = 1;
 
@@ -582,7 +655,8 @@ int main() {
 
     // Output: Display the multiplication table using a while loop
     cout << "Multiplication Table for " << number << ":\n";
-    while (i <= 10) {
+    while (i <= 10)
+    {
         cout << number << " x " << i << " = " << (number * i) << endl;
         i++;
     }
@@ -592,7 +666,8 @@ int main() {
 
 // Write a program that shows even or odd number using while loop
 
-int main() {
+int main()
+{
     // Declare variables
     int number;
 
@@ -601,10 +676,14 @@ int main() {
     cin >> number;
 
     // Determine if the number is even or odd using a while loop
-    while (number != 0) {
-        if (number % 2 == 0) {
+    while (number != 0)
+    {
+        if (number % 2 == 0)
+        {
             cout << number << " is an even number." << endl;
-        } else {
+        }
+        else
+        {
             cout << number << " is an odd number." << endl;
         }
 
@@ -618,7 +697,8 @@ int main() {
 
 // Uses a while loop to calculate the sum of numbers from 1 to a user-defined limit
 
-int main() {
+int main()
+{
     // Declare variables
     int limit, currentNumber = 1, sum = 0;
 
@@ -627,7 +707,8 @@ int main() {
     cin >> limit;
 
     // Calculate the sum of numbers from 1 to the user-defined limit using a while loop
-    while (currentNumber <= limit) {
+    while (currentNumber <= limit)
+    {
         sum = sum + currentNumber;
         currentNumber++;
 
@@ -639,11 +720,12 @@ int main() {
     cout << "The sum of numbers from 1 to " << limit << " is: " << sum << endl;
 
     return 0;
-} 
+}
 
 // Factorial of a number
 
-int main() {
+int main()
+{
     // Declare variables
     int number, factorial = 1, i = 1;
 
@@ -652,7 +734,8 @@ int main() {
     cin >> number;
 
     // Calculate the factorial of the number using a while loop
-    while (i <= number) {
+    while (i <= number)
+    {
         factorial = factorial * i;
         i++;
     }
@@ -665,15 +748,17 @@ int main() {
 
 // Find the fourth power of numb using While Loop
 
-int main() {
+int main()
+{
     int limit;
     // Declare variables
     int i = 1;
     cout << "Enter a limit: ";
     cin >> limit;
     // Calculate the fourth power using a while loop
-    while (i <= limit) {
-        int result = i*i*i*i;
+    while (i <= limit)
+    {
+        int result = i * i * i * i;
         cout << result << endl;
         i++;
     }
@@ -683,13 +768,15 @@ int main() {
 
 // The user enters numbers, and the loop continues until 0 is entered, at which point the loop and the program terminate.
 
-int main() {
+int main()
+{
     int number;
 
     cout << "Enter numbers (enter 0 to terminate):\n";
     cin >> number;
 
-    while (number != 0) {
+    while (number != 0)
+    {
         // Process the entered number (you can perform additional actions here)
         // For this example, the program simply echoes the entered number
         cout << "You entered: " << number << endl;
@@ -706,7 +793,8 @@ int main() {
 
 // Display first 10 natural numbers
 
-int main() {
+int main()
+{
     int i = 1;
     while (i <= 10)
     {
@@ -720,7 +808,8 @@ int main() {
 // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 // Sumof first 10 natural numbers = 55
 
-int main() {
+int main()
+{
     int i = 1, sum = 0;
     while (i <= 10)
     {
@@ -728,36 +817,43 @@ int main() {
         sum = sum + i;
         i++;
     }
-        cout << "The sum of first 10 natural numbers: " << sum << endl;
+    cout << "The sum of first 10 natural numbers: " << sum << endl;
     return 0;
 }
 
 // Get a number from user and display whether it's prime number or not (you can use loop)
 
-int main() {
+int main()
+{
     int num, i, count = 0;
     cout << "Enter a number: ";
     cin >> num;
 
-    for (i = 2; i <= num / 2; ++i) {
-        if (num % i == 0) {
+    for (i = 2; i <= num / 2; ++i)
+    {
+        if (num % i == 0)
+        {
             count++;
-            }
         }
-            if (count > 0)
-            cout << "\n" << num << " is not a prime number.";
-            else
-            cout << "\n" << num << " is a prime number.";
+    }
+    if (count > 0)
+        cout << "\n"
+             << num << " is not a prime number.";
+    else
+        cout << "\n"
+             << num << " is a prime number.";
     return 0;
 }
 
 // Get a number from user and display it's factorial using while loop
 
-int main() {
+int main()
+{
     int number, factorial = 1, i = 1;
     cout << "Enter a number: ";
     cin >> number;
-    while (i <= number) {
+    while (i <= number)
+    {
         factorial = factorial * i;
         i++;
     }
@@ -767,7 +863,8 @@ int main() {
 
 // Get three/four digits number from user and display it's sum like 123, sum = 6
 
-int main() {
+int main()
+{
     int dig, dig1, dig2, sum;
     cout << "Enter 3 digit number: ";
     cin >> dig;
@@ -782,11 +879,13 @@ int main() {
 
 // Get two numbers & display sum using while loop and ask the user if he/she wants to again sum two numbers
 
-int main() {
+int main()
+{
     int choice, num1, num2, sum;
     cout << "Enter 1 to calculate another sum (0 to terminate)";
     cin >> choice;
-    while (choice == 1) {
+    while (choice == 1)
+    {
         cout << "Enter two numbers: ";
         cin >> num1 >> num2;
         sum = num1 + num2;
@@ -800,12 +899,15 @@ int main() {
 
 // Display Fibonacci numbers till 500
 
-int main() {
+int main()
+{
     int first = 0, second = 1, next;
     cout << "Fibonacci Series till 500:\n";
-    cout << first << "\n" << second << "\n";
+    cout << first << "\n"
+         << second << "\n";
     next = first + second;
-    while (next <= 500) {
+    while (next <= 500)
+    {
         cout << next << "\n";
         first = second;
         second = next;
@@ -816,8 +918,9 @@ int main() {
 
 // Dairy Farm Calculation (Milk production and profit)
 
-int main() {
-    double totalMilkProd, cartonsReq, totalExpense,profit;
+int main()
+{
+    double totalMilkProd, cartonsReq, totalExpense, profit;
     cout << "Enter the amount of milk produced today morning(in Liters): ";
     cin >> totalMilkProd;
     cartonsReq = totalMilkProd / 3.78;
@@ -827,7 +930,7 @@ int main() {
     cout << "Total Expense: $" << totalExpense << endl;
     cout << "Total Profit: $" << profit << endl;
     return 0;
-    }
+}
 
 // Retail Discount on Customer Type
 
@@ -862,11 +965,13 @@ int main()
 
 // Sum of digits of a number
 
-int main() {
+int main()
+{
     int num, sum = 0;
     cout << "Enter a number: ";
     cin >> num;
-    do {
+    do
+    {
         sum += num % 10;
         num /= 10;
     } while (num > 0);
@@ -876,37 +981,49 @@ int main() {
 
 // Whether the character is Vowel or Consonant
 
-int main() {
+int main()
+{
     char ch;
     cout << "Enter a Character: ";
     cin >> ch;
-    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
-         cout << ch << " is Vowel.";
-        } else {
-            cout << ch << " is Consonant.";
-        }
+    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+    {
+        cout << ch << " is Vowel.";
+    }
+    else
+    {
+        cout << ch << " is Consonant.";
+    }
     return 0;
 }
 
 // Find number of vowels, digits, consonants and white spaces in a string
 
-int main() {
+int main()
+{
     int vowels = 0, digits = 0, consonants = 0, white_spaces = 0;
     string str;
     cout << "Enter a string: ";
     getline(cin, str);
 
-
-    for (int i = 0; i < str.length(); i++) {
+    for (int i = 0; i < str.length(); i++)
+    {
         char c = str[i];
 
-        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') {
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U')
+        {
             vowels++;
-        } else if (str[i]>= '0' && str[i] <= '9') {
+        }
+        else if (str[i] >= '0' && str[i] <= '9')
+        {
             digits++;
-        } else if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')) {
+        }
+        else if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
+        {
             consonants++;
-        } else if (str[i] == ' ') {
+        }
+        else if (str[i] == ' ')
+        {
             white_spaces++;
         }
     }
@@ -921,12 +1038,15 @@ int main() {
 
 // Display Fibonacci numbers till 500
 
-int main() {
+int main()
+{
     int first = 0, second = 1, next;
     cout << "Fibonacci Series till 500:\n";
-    cout << first << "\n" << second << "\n";
+    cout << first << "\n"
+         << second << "\n";
     next = first + second;
-    while (next <= 500) {
+    while (next <= 500)
+    {
         cout << next << "\n";
         first = second;
         second = next;
