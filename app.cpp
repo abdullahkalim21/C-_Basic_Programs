@@ -1,3 +1,59 @@
+/*
+------------Table of Contents------------
+1. 4 Arithmetic Operations of 2 Numbers
+2. Product of Numbers
+3. Subtraction of Numbers
+4. If-Else Function
+5. Greater between two Integers
+6. Swaping two numbers with 3 variable containers
+7. Swaping two numbers with SWAP function
+8. Area of a circle
+9. Students Result Card
+10. Table of an Integer using for loop
+11. Table of an Integer with manually writing till 10
+12. Reverse of 3 digits
+13. Reverse of 4 digits simple
+14. Sepration, Reverse, & Increment of 4 digits
+15. Salary Increment of Employees
+16. Displaying Equal Numbers
+17. Dial Menu for Students to calculate Percentage & Grade
+18. Celsius to Fahrenheit
+19. Distance Calculator Kilometre to Miles
+20. Distance Calculator Miles to Kilometres
+21. Age in months
+22. Age in Days
+23. Light years to Astronomical units
+24. Calculate Hours, Minutes & Seconds into Seconds
+25. Displaying greater and smaller or equal number among 3 integers input by user
+26. Find Quotient & Remainder
+27. Find size of int, float, double & char in your system
+28. Sum & Average of different Data types
+29. Display Square of Natural numbers
+30. Display maximum number from five different numbers input from user
+31. get one ASCII value from user and display next five symbols of ASCII values without using loop
+32. Write a program that reverses a number using a while loop
+33. Write a multiplication table that take input from user using while loop
+34. Write a program that shows even or odd number using while loop
+35. Uses a while loop to calculate the sum of numbers from 1 to a user-defined limit
+36. Factorial of a number
+37. Find the fourth power of numb using While Loop
+38. The user enters numbers, and the loop continues until 0 is entered, at which point the loop and the program terminate.
+39. Display first 10 natural numbers
+40. Display first 10 natural numbers and their sum
+41. Get a number from user and display whether it's prime number or not (you can use loop)
+42. Get a number from user and display it's factorial using while loop
+43. Get three/four digits number from user and display it's sum like 123, sum = 6
+44. Get two numbers & display sum using while loop and ask the user if he/she wants to again sum two numbers
+45. Display Fibonacci numbers till 500
+46. Dairy Farm Calculation (Milk production and profit)
+47. Retail Discount on Customer Type
+48. Sum of digits of a number
+49. Whether the character is Vowel or Consonant
+50. Find number of vowels, digits, consonants and white spaces in a string
+51. Display Fibonacci numbers till 500
+
+*/
+
 #include <iostream>
 using namespace std;
 /*
