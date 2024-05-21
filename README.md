@@ -1,8 +1,5 @@
-# cpp_Basic_Programs
-app.cpp is the main file & contains the source code.
-Every Program is commented so it's up to you which program you want to use. So Remove the multi-line comments signs from the program that you want to use
-OR
-You can copy the program code and run it in your own file (I'll recommend you copy the code to not get into more complications)
-
-P.S.
-These are the basic programs that I have done in learning C++ language. Any future changes & programs that I'll perform will be available here with the source code.
+# C++ Basic Programs
+Every file has different kinds of small programs and there's a **_Table of Contents_** in each file that will tell you which program is written in the respective file.
+Copy the code and run it in your file/add it to your project.<br/>
+**_P.S._**
+These are the basic programs that I have done while learning C++ language. Any future changes & programs that I'll perform will be available here with the source code.
