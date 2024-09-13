@@ -3,7 +3,6 @@ using namespace std;
 
 int main()
 {
-
     int employeePayCode, managerSalary = 1000, commWorkerBasicSalary = 250;
     float totalWorkHours, extraWorkHours, regularWorkHours = 40.0, regularWorkHourSalary, extraWorkHourSalary, hourlyWorkerSalary;
     do // using a do-while loop so user don't have to run the program again & again

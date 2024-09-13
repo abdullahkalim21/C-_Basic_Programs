@@ -29,21 +29,28 @@ int main()
     }
     return 0;
 }
+// Using pointers in Arrays for Traversal & Address display
 
 int main()
 {
-    int array[5];
-    cout << "Enter 5 values of an array: ";
+    int array[5];   // Declare an integer array of size 5
+    cout << "Enter 5 values of an array: "; // Prompt the user to enter values
     for (int i = 0; i < 5; i++)
-        cin >> array[i];
-    int *ptr1 = &array[0];
+        cin >> array[i]; // Read 5 integer values from the user and store them in the array
+
+    int *ptr1 = &array[0]; // Initialize a pointer to the first element of the array
+
     for (int i = 0; i < 5; i++)
-        cout << *ptr1++ << "\t";
-    cout << endl;
+        cout << *ptr1++ << "\t"; // Print the values of the array using the pointer and increment the pointer
+
+    cout << endl; // Print a newline for better formatting
+
     for (int i = 0; i < 5; i++)
-        cout << &array[i] << "\t";
+        cout << &array[i] << "\t"; // Print the memory addresses of each element in the array
+
     return 0;
 }
+
 // Program to Swap values using pointers
 // User-defined function to swap values using pointers
 void swapValues(int &a, int &b)

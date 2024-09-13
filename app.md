@@ -1,68 +1,88 @@
-/*
-------------Table of Contents------------
-1. 4 Arithmetic Operations of 2 Numbers
-2. Product of Numbers
-3. Subtraction of Numbers
-4. If-Else Function
-5. Greater between two Integers
-6. Swaping two numbers with 3 variable containers
-7. Swaping two numbers with SWAP function
-8. Area of a circle
-9. Students Result Card
-10. Table of an Integer using for loop
-11. Table of an Integer with manually writing till 10
-12. Reverse of 3 digits
-13. Reverse of 4 digits simple
-14. Sepration, Reverse, & Increment of 4 digits
-15. Salary Increment of Employees
-16. Displaying Equal Numbers
-17. Dial Menu for Students to calculate Percentage & Grade
-18. Celsius to Fahrenheit
-19. Distance Calculator Kilometre to Miles
-20. Distance Calculator Miles to Kilometres
-21. Age in months
-22. Age in Days
-23. Light years to Astronomical units
-24. Calculate Hours, Minutes & Seconds into Seconds
-25. Displaying greater and smaller or equal number among 3 integers input by user
-26. Find Quotient & Remainder
-27. Find size of int, float, double & char in your system
-28. Sum & Average of different Data types
-29. Display Square of Natural numbers
-30. Display maximum number from five different numbers input from user
-31. get one ASCII value from user and display next five symbols of ASCII values without using loop
-32. Write a program that reverses a number using a while loop
-33. Write a multiplication table that take input from user using while loop
-34. Write a program that shows even or odd number using while loop
-35. Uses a while loop to calculate the sum of numbers from 1 to a user-defined limit
-36. Factorial of a number
-37. Find the fourth power of numb using While Loop
-38. The user enters numbers, and the loop continues until 0 is entered, at which point the loop and the program terminate.
-39. Display first 10 natural numbers
-40. Display first 10 natural numbers and their sum
-41. Get a number from user and display whether it's prime number or not (you can use loop)
-42. Get a number from user and display it's factorial using while loop
-43. Get three/four digits number from user and display it's sum like 123, sum = 6
-44. Get two numbers & display sum using while loop and ask the user if he/she wants to again sum two numbers
-45. Display Fibonacci numbers till 500
-46. Dairy Farm Calculation (Milk production and profit)
-47. Retail Discount on Customer Type
-48. Sum of digits of a number
-49. Whether the character is Vowel or Consonant
-50. Find number of vowels, digits, consonants and white spaces in a string
-51. Display Fibonacci numbers till 500
+# Table of Contents
 
-*/
+[Basic C++ Header Files](#basic-c-header-files)
 
-#include <iostream>
+1. [4 Arithmetic Operations of 2 Numbers](#1-4-arithmetic-operations-of-2-numbers)
+2. [Product of Numbers](#2-product-of-numbers)
+3. [Subtraction of Numbers](#3-subtraction-of-numbers)
+4. [If-Else Function](#4-if-else-function)
+5. [Greater Between Two Integers](#5-greater-between-two-integers)
+6. [Swapping Two Numbers with 3 Variables](#6-swaping-two-numbers-with-3-variable-containers)
+7. [Swapping Two Numbers with SWAP Function](#7-swaping-two-numbers-with-swap-function)
+8. [Area of a Circle](#8-area-of-a-circle)
+9. [Students Result Card](#9-students-result-card)
+10. [Table of an Integer using For Loop](#10-table-of-an-integer-using-for-loop)
+11. [Table of an Integer Manually till 10](#11-table-of-an-integer-with-manually-writing-till-10)
+12. [Reverse of 3 Digits](#12-reverse-of-3-digits)
+13. [Reverse of 4 Digits](#13-reverse-of-4-digits-simple)
+14. [Separation, Reverse, & Increment of 4 Digits](#14-sepration-reverse--increment-of-4-digits)
+15. [Salary Increment of Employees](#15-salary-increment-of-employees)
+16. [Displaying Equal Numbers](#16-displaying-equal-numbers)
+17. [Dial Menu for Students to Calculate Percentage & Grade](#17-dial-menu-for-students-to-calculate-percentage--grade)
+18. [Celsius to Fahrenheit](#18-celsius-to-fahrenheit)
+19. [Distance Calculator Kilometres to Miles](#19-distance-calculator-kilometre-to-miles)
+20. [Distance Calculator Miles to Kilometres](#20-distance-calculator-miles-to-kilometres)
+21. [Age in Months](#21-age-in-months)
+22. [Age in Days](#22-age-in-days)
+23. [Light Years to Astronomical Units](#23-light-years-to-astronomical-units)
+24. [Calculate Hours, Minutes & Seconds into Seconds](#24-calculate-hours-minutes--seconds-into-seconds)
+25. [Displaying Greater and Smaller or Equal Number Among 3 Integers](#25-displaying-greater-and-smaller-or-equal-number-among-3-integers-input-by-user)
+26. [Find Quotient & Remainder](#26-find-quotient--remainder)
+27. [Find Size of int, float, double & char](#27-find-size-of-int-float-double--char-in-your-system)
+28. [Sum & Average of Different Data Types](#28-sum--average-of-different-data-types)
+29. [Display Square of Natural Numbers](#29-display-square-of-natural-numbers)
+30. [Display Maximum Number from Five Inputs](#30-display-maximum-number-from-five-different-numbers-input-from-user)
+31. [Display Next Five ASCII Symbols from Input](#31-get-one-ascii-value-from-user-and-display-next-five-symbols-of-ascii-values-without-using-loop)
+32. [Reverse a Number using While Loop](#32-write-a-program-that-reverses-a-number-using-a-while-loop)
+33. [Multiplication Table using While Loop](#33-write-a-multiplication-table-that-take-input-from-user-using-while-loop)
+34. [Even or Odd Number using While Loop](#34-write-a-program-that-shows-even-or-odd-number-using-while-loop)
+35. [Sum of Numbers from 1 to a User-defined Limit](#35-uses-a-while-loop-to-calculate-the-sum-of-numbers-from-1-to-a-user-defined-limit)
+36. [Factorial of a Number](#36-factorial-of-a-number)
+37. [Fourth Power of a Number using While Loop](#37-find-the-fourth-power-of-numb-using-while-loop)
+38. [Loop Continues Until 0 is Entered](#38-the-user-enters-numbers-and-the-loop-continues-until-0-is-entered-at-which-point-the-loop-and-the-program-terminate)
+39. [Display First 10 Natural Numbers](#39-display-first-10-natural-numbers)
+40. [Display First 10 Natural Numbers and Their Sum](#40-display-first-10-natural-numbers-and-their-sum)
+41. [Prime Number Check using Loop](#41-get-a-number-from-user-and-display-whether-its-prime-number-or-not-you-can-use-loop)
+42. [Factorial using While Loop](#42-get-a-number-from-user-and-display-its-factorial-using-while-loop)
+43. [Sum of Digits of a Three/Four-digit Number](#43-get-threefour-digits-number-from-user-and-display-its-sum-like-123-sum--6)
+44. [Sum Two Numbers with While Loop](#44-get-two-numbers--display-sum-using-while-loop-and-ask-the-user-if-heshe-wants-to-again-sum-two-numbers)
+45. [Fibonacci Numbers Till 500](#45-display-fibonacci-numbers-till-500)
+46. [Dairy Farm Calculation](#46-dairy-farm-calculation-milk-production-and-profit)
+47. [Retail Discount on Customer Type](#47-retail-discount-on-customer-type)
+48. [Sum of Digits of a Number](#48-sum-of-digits-of-a-number)
+49. [Vowel or Consonant](#49-whether-the-character-is-vowel-or-consonant)
+50. [Count Vowels, Digits, Consonants, and White Spaces in a String](#50-find-number-of-vowels-digits-consonants-and-white-spaces-in-a-string)
+51. [Fibonacci Numbers Till 500 (Duplicate)](#51-display-fibonacci-numbers-till-500)
+
+---
+
+## Basic C++ Header Files
+
+You can use these basic header files in your C++ projects depending on the functionality you need
+
+```cpp
+#include <iostream>     // The `<iostream>` header file is used to handle input and output operations in C++
+#include <iomanip>    // The <iomanip> header file is used to manipulate the input/output format
+#include <cmath>    // The <cmath> header file contains mathematical functions
+#include <string>   // The <string> header file is used to work with strings in C++
+#include <vector>   // The <vector> header file is used to work with dynamic arrays
+#include <algorithm>    // The <algorithm> header file is used for common algorithms like sorting, searching, etc.
+#include <cctype>   // The <cctype> header file is used for character handling functions
+#include <ctime>    // The <ctime> header file is used to manipulate date and time
+#include <map>  // The <map> header file is used to work with associative arrays (maps)
+#include <set>  // The <set> header file is used to work with sets, which store unique elements
+
 using namespace std;
 /*
-    Every Program is commented so it's upto to you that which program you want to use. So Remove the multi-line comments' signs from the program that you want to use
-    OR
-    You can copy the program code and run it in your own file (I'll recommend you to copy the code to not get into more complications)
+It provides a convenient shorthand for accessing standard library components. You are essentially telling the compiler to assume that names within the std namespace are being referenced. This means that you no longer need to qualify these names with the std:: prefix
 */
-// 4 Arithmetic Operations of 2 Numbers
+```
 
+---
+
+## 1. 4 Arithmetic Operations of 2 Numbers
+
+```cpp
 int main()
 {
     int x, y, sum, sub, pro;
@@ -80,9 +100,11 @@ int main()
     div = x / y;
     cout << "Division (/) is: " << div << endl;
 }
+```
 
-// Product of Numbers
+## 2. Product of Numbers
 
+```cpp
 int main()
 {
     int x, y;
@@ -94,9 +116,11 @@ int main()
     product = x * y;
     cout << "Product of two numbers is: " << product;
 }
+```
 
-// Subtraction of Numbers
+## 3. Subtraction of Numbers
 
+```cpp
 int main()
 {
     int a, b;
@@ -108,9 +132,11 @@ int main()
     sub = a - b;
     cout << "Subtraction of two numbers is: " << sub;
 }
+```
 
-// If-Else Function
+## 4. If-Else Function
 
+```cpp
 int main()
 {
     float marks;
@@ -126,9 +152,11 @@ int main()
     }
     return 0;
 }
+```
 
-// Greater between two Integers
+## 5. Greater between two Integers
 
+```cpp
 int main()
 {
     int a, b;
@@ -146,9 +174,11 @@ int main()
     }
     return 0;
 }
+```
 
-// Swaping two numbers with 3 variable containers
+## 6. Swaping two numbers with 3 variable containers
 
+```cpp
 int main()
 {
     int x, y, z;
@@ -161,9 +191,11 @@ int main()
     y = z; // Value of z is assigned to y that was actual value of x & now the value of z is empty/nothing
     cout << "Swapped numbers are: \n X= " << x << " \n Y= " << y;
 }
+```
 
-// Swaping two numbers with SWAP function
+## 7. Swaping two numbers with SWAP function
 
+```cpp
 int main()
 {
     int x, y;
@@ -175,9 +207,11 @@ int main()
     swap(x, y); // It's a pre-built function for swaping values
     cout << "After swapping: x = " << x << " y = " << y << endl;
 }
+```
 
-// Area of a circle
+## 8. Area of a circle
 
+```cpp
 int main()
 {
     float radius;
@@ -186,9 +220,11 @@ int main()
     float area = 3.14 * radius * radius;
     cout << "Area of the circle is: " << area << endl;
 }
+```
 
-// Students Result Card
+## 9. Students Result Card
 
+```cpp
 int main()
 {
     int rollNum;
@@ -225,9 +261,11 @@ int main()
     percentage = (obtainedMarks / 500) * 100; // Calculating Percentage
     cout << "Percentage: " << percentage << "%";
 }
+```
 
-// Table of an Integer using for loop
+## 10. Table of an Integer using for loop
 
+```cpp
 int main()
 {
     int number, multiplier;
@@ -238,9 +276,11 @@ int main()
         cout << number << " * " << multiplier << " = " << (number * multiplier) << endl;
     }
 }
+```
 
-// Table of an Integer with manually writing till 10
+## 11. Table of an Integer with manually writing till 10
 
+```cpp
 int main()
 {
     int number;
@@ -257,9 +297,11 @@ int main()
     cout << number << " * 9 = " << (number * 9) << endl;
     cout << number << " * 10 = " << (number * 10) << endl;
 }
+```
 
-// Reverse of 3 digits
+## 12. Reverse of 3 digits
 
+```cpp
 int main()
 {
     int n, a, b;
@@ -272,9 +314,11 @@ int main()
     cout << "Reverse is " << n << b << a << endl;
     return 0;
 }
+```
 
-// Reverse of 4 digits simple
+## 13. Reverse of 4 digits simple
 
+```cpp
 int main()
 {
     int n, a, b, c;
@@ -289,9 +333,11 @@ int main()
     cout << "Reverse is " << n << c << b << a << endl;
     return 0;
 }
+```
 
-// Sepration, Reverse, & Increment of 4 digits
+## 14. Sepration, Reverse, & Increment of 4 digits
 
+```cpp
 int main()
 {
     int num, a, b, c, d;
@@ -309,9 +355,11 @@ int main()
     // cout << ++a << "\t" << ++b << "\t" << ++c << "\t" << ++d ;  //Increments each digit by 1
     return 0;
 }
+```
 
-// Salary Increment of Employees
+## 15. Salary Increment of Employees
 
+```cpp
 int main()
 {
     int grade;
@@ -334,9 +382,11 @@ int main()
     }
     return 0;
 }
+```
 
-// Displaying Equal Numbers
+## 16. Displaying Equal Numbers
 
+```cpp
 int main()
 {
     float a, b, c;
@@ -360,9 +410,11 @@ int main()
     }
     return 0;
 }
+```
 
-// Dial Menu for Students to calculate Percentage & Grade
+## 17. Dial Menu for Students to calculate Percentage & Grade
 
+```cpp
 int main()
 {
     int obtainedMarks, totalMarks, percentage, response;
@@ -431,9 +483,11 @@ int main()
     }
     return 0;
 }
+```
 
-// Celsius to Fahrenheit
+## 18. Celsius to Fahrenheit
 
+```cpp
 int main()
 {
     float cel, fah;
@@ -443,9 +497,11 @@ int main()
     cout << cel << " degrees Celsius is " << fah << " degrees Fahrenheit." << endl;
     return 0;
 }
+```
 
-// Distance Calculator Kilometre to Miles
+## 19. Distance Calculator Kilometre to Miles
 
+```cpp
 int main()
 {
     float km, miles;
@@ -454,9 +510,11 @@ int main()
     miles = km * 0.62;
     cout << "Distance in Miles: " << miles << endl;
 }
+```
 
-// Distance Calculator Miles to Kilometres
+## 20. Distance Calculator Miles to Kilometres
 
+```cpp
 int main()
 {
     float km, miles;
@@ -465,9 +523,11 @@ int main()
     km = miles * 1.61;
     cout << "Distance in Kilometres: " << km << endl;
 }
+```
 
-// Age in months
+## 21. Age in months
 
+```cpp
 int main()
 {
     int ageInYears, ageInMonths;
@@ -476,9 +536,11 @@ int main()
     ageInMonths = ageInYears * 12;
     cout << "You're " << ageInMonths << " months old" << endl;
 }
+```
 
-// Age in Days
+## 22. Age in Days
 
+```cpp
 int main()
 {
     int ageInYears, ageInDays;
@@ -487,10 +549,12 @@ int main()
     ageInDays = ageInYears * 365;
     cout << "You're " << ageInDays << " days old" << endl;
 }
+```
 
-// Light years to Astronomical units
+## 23. Light years to Astronomical units
+
+```cpp
 // Astronomical Units is distance from earth to sun (about 150M km/93M miles)
-
 int main()
 {
     double lightYears, astroUnits;
@@ -499,9 +563,11 @@ int main()
     astroUnits = lightYears * 63240;
     cout << lightYears << " light years = " << astroUnits << " astronomical units.";
 }
+```
 
-// Calculate Hours, Minutes & Seconds into Seconds
+## 24. Calculate Hours, Minutes & Seconds into Seconds
 
+```cpp
 int main()
 {
     int hours, minutes, seconds;
@@ -515,9 +581,11 @@ int main()
     cout << "Total seconds: " << total_seconds << endl;
     return 0;
 }
+```
 
-// Displaying greater and smaller or equal number among 3 integers input by user
+## 25. Displaying greater and smaller or equal number among 3 integers input by user
 
+```cpp
 int main()
 {
     int a, b, c, max, min;
@@ -551,9 +619,11 @@ int main()
     cout << "Minimum value is : " << min << endl; // Minimum Value is displayed
     return 0;
 }
+```
 
-// Find Quotient & Remainder
+## 26. Find Quotient & Remainder
 
+```cpp
 int main()
 {
     int num1, num2;
@@ -576,9 +646,11 @@ int main()
     }
     return 0;
 }
+```
 
-// Find size of int, float, double & char in your system
+## 27. Find size of int, float, double & char in your system
 
+```cpp
 int main()
 {
     // These sizeof() functions are built-in functions
@@ -588,9 +660,11 @@ int main()
     cout << "Size of char: " << sizeof(char) << " bytes" << endl;
     return 0;
 }
+```
 
-// Sum & Average of different Data types
+## 28. Sum & Average of different Data types
 
+```cpp
 int main()
 {
     int a, b, c;
@@ -608,9 +682,11 @@ int main()
     cout << "Average = " << average << endl;
     return 0;
 }
+```
 
-// Display Square of Natural numbers
+## 29. Display Square of Natural numbers
 
+```cpp
 int main()
 {
     int i = 1, n = 1;
@@ -622,9 +698,11 @@ int main()
     }
     return 0;
 }
+```
 
-// Display maximum number from five different numbers input from user
+## 30. Display maximum number from five different numbers input from user
 
+```cpp
 int main()
 {
     int a, b, c, d, e, max;
@@ -653,9 +731,11 @@ int main()
     cout << "Maximum value is: " << max << endl; // Maximum value is displayed
     return 0;
 }
+```
 
-// get one ASCII value from user and display next five symbols of ASCII values without using loop
+## 31. get one ASCII value from user and display next five symbols of ASCII values without using loop
 
+```cpp
 int main()
 {
     int asciiValue;
@@ -671,9 +751,11 @@ int main()
     cout << "Next 5 values are: " << char1 << "\t" << char2 << "\t" << char3 << "\t" << char4 << "\t" << char5 << endl; // Next 5 characters from current character are displayed
     return 0;
 }
+```
 
-// Write a program that reverses a number using a while loop
+## 32. Write a program that reverses a number using a while loop
 
+```cpp
 int main()
 {
     // Declare variables
@@ -696,9 +778,11 @@ int main()
 
     return 0;
 }
+```
 
-// Write a multiplication table that take input from user using while loop
+## 33. Write a multiplication table that take input from user using while loop
 
+```cpp
 int main()
 {
     // Declare variables
@@ -718,9 +802,11 @@ int main()
 
     return 0;
 }
+```
 
-// Write a program that shows even or odd number using while loop
+## 34. Write a program that shows even or odd number using while loop
 
+```cpp
 int main()
 {
     // Declare variables
@@ -749,9 +835,11 @@ int main()
 
     return 0;
 }
+```
 
-// Uses a while loop to calculate the sum of numbers from 1 to a user-defined limit
+## 35. Uses a while loop to calculate the sum of numbers from 1 to a user-defined limit
 
+```cpp
 int main()
 {
     // Declare variables
@@ -776,9 +864,11 @@ int main()
 
     return 0;
 }
+```
 
-// Factorial of a number
+## 36. Factorial of a number
 
+```cpp
 int main()
 {
     // Declare variables
@@ -800,9 +890,11 @@ int main()
 
     return 0;
 }
+```
 
-// Find the fourth power of numb using While Loop
+## 37. Find the fourth power of numb using While Loop
 
+```cpp
 int main()
 {
     int limit;
@@ -820,9 +912,11 @@ int main()
 
     return 0;
 }
+```
 
-// The user enters numbers, and the loop continues until 0 is entered, at which point the loop and the program terminate.
+## 38. The user enters numbers, and the loop continues until 0 is entered, at which point the loop and the program terminate.
 
+```cpp
 int main()
 {
     int number;
@@ -845,9 +939,11 @@ int main()
 
     return 0;
 }
+```
 
-// Display first 10 natural numbers
+## 39. Display first 10 natural numbers
 
+```cpp
 int main()
 {
     int i = 1;
@@ -858,11 +954,11 @@ int main()
     }
     return 0;
 }
+```
 
-// Display first 10 natural numbers and their sum
-// 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-// Sumof first 10 natural numbers = 55
+## 40. Display first 10 natural numbers and their sum
 
+```cpp
 int main()
 {
     int i = 1, sum = 0;
@@ -875,9 +971,11 @@ int main()
     cout << "The sum of first 10 natural numbers: " << sum << endl;
     return 0;
 }
+```
 
-// Get a number from user and display whether it's prime number or not (you can use loop)
+## 41. Get a number from user and display whether it's prime number or not (you can use loop)
 
+```cpp
 int main()
 {
     int num, i, count = 0;
@@ -899,9 +997,11 @@ int main()
              << num << " is a prime number.";
     return 0;
 }
+```
 
-// Get a number from user and display it's factorial using while loop
+## 42. Get a number from user and display it's factorial using while loop
 
+```cpp
 int main()
 {
     int number, factorial = 1, i = 1;
@@ -915,9 +1015,11 @@ int main()
     cout << "The factorial of " << number << " is: " << factorial << endl;
     return 0;
 }
+```
 
-// Get three/four digits number from user and display it's sum like 123, sum = 6
+## 43. Get three/four digits number from user and display it's sum like 123, sum = 6
 
+```cpp
 int main()
 {
     int dig, dig1, dig2, sum;
@@ -931,9 +1033,11 @@ int main()
     cout << "Sum of digits = " << sum;
     return 0;
 }
+```
 
-// Get two numbers & display sum using while loop and ask the user if he/she wants to again sum two numbers
+## 44. Get two numbers & display sum using while loop and ask the user if he/she wants to again sum two numbers
 
+```cpp
 int main()
 {
     int choice, num1, num2, sum;
@@ -951,15 +1055,16 @@ int main()
     }
     return 0;
 }
+```
 
-// Display Fibonacci numbers till 500
+## 45. Display Fibonacci numbers till 500
 
+```cpp
 int main()
 {
     int first = 0, second = 1, next;
     cout << "Fibonacci Series till 500:\n";
-    cout << first << "\n"
-         << second << "\n";
+    cout << first << "\n" << second << "\n";
     next = first + second;
     while (next <= 500)
     {
@@ -970,9 +1075,11 @@ int main()
     }
     return 0;
 }
+```
 
-// Dairy Farm Calculation (Milk production and profit)
+## 46. Dairy Farm Calculation (Milk production and profit)
 
+```cpp
 int main()
 {
     double totalMilkProd, cartonsReq, totalExpense, profit;
@@ -986,9 +1093,11 @@ int main()
     cout << "Total Profit: $" << profit << endl;
     return 0;
 }
+```
 
-// Retail Discount on Customer Type
+## 47. Retail Discount on Customer Type
 
+```cpp
 int main()
 {
     int cusType;
@@ -1017,9 +1126,11 @@ int main()
     cout << "Total Payable: $" << payableAmount << endl;
     return 0;
 }
+```
 
-// Sum of digits of a number
+## 48. Sum of digits of a number
 
+```cpp
 int main()
 {
     int num, sum = 0;
@@ -1033,9 +1144,11 @@ int main()
     cout << "Sum = " << sum << endl;
     return 0;
 }
+```
 
-// Whether the character is Vowel or Consonant
+## 49. Whether the character is Vowel or Consonant
 
+```cpp
 int main()
 {
     char ch;
@@ -1051,9 +1164,11 @@ int main()
     }
     return 0;
 }
+```
 
-// Find number of vowels, digits, consonants and white spaces in a string
+## 50. Find number of vowels, digits, consonants and white spaces in a string
 
+```cpp
 int main()
 {
     int vowels = 0, digits = 0, consonants = 0, white_spaces = 0;
@@ -1090,9 +1205,11 @@ int main()
 
     return 0;
 }
+```
 
-// Display Fibonacci numbers till 500
+## 51. Display Fibonacci numbers till 500
 
+```cpp
 int main()
 {
     int first = 0, second = 1, next;
@@ -1109,3 +1226,4 @@ int main()
     }
     return 0;
 }
+```
