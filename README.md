@@ -1,7 +1,8 @@
 # C++ Basic Programs
-Every file has different kinds of small programs and there's a **_Table of Contents_** in each file that will tell you which program is written in the respective file.
-Copy the code and run it in your file/add it to your project.<br/>
-**_P.S._**
-These are the basic programs that I have done while learning C++ language. Any future changes & programs that I'll perform will be available here with the source code.
-_Every file has a copy of it with same name with .md extension
-Like app.cpp has a same file's content as app.md but in .md file you can find programs easily with proper links attatched_
+This repository contains various small programs I've created while learning ```C++```. Each program is organized in its own file, and you can find a ```Table of Contents``` in each file to help you locate them easily.
+
+To use any program, simply copy the code from the corresponding file and add it to your own project.
+
+Additionally, for each C++ file (e.g., ```app.cpp```), there is a Markdown file with the same name (e.g., ```app.md```). The Markdown files provide a more user-friendly way to view the programs, complete with links for easy navigation.
+
+As I continue to learn and create new programs, I'll update this collection with the latest source code.
