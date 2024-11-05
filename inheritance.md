@@ -60,7 +60,7 @@ int main() {
     return 0;
 }
 ```
-<br>
+<img src="/images/1-single_inheritance.png" alt="Example Diagram of Single Inheritance" width="300"/>
 
 __Example 2__: `Ebook` inherits from `Book` in the following code.
 
@@ -109,6 +109,7 @@ int main() {
     return 0;
 }
 ```
+<img src="/images/2-single_inheritance.png" alt="Example Diagram of Single Inheritance" width="300"/>
 
 ## MULTI-LEVEL INHERITANCE
 
@@ -200,6 +201,7 @@ int main() {
     return 0;
 }
 ```
+<img src="/images/1-Multi_Level_Inheritance.png" alt="Example Diagram of Multilevel Inheritance" height="600" />
 
 ## MULTIPLE INHERITANCE
 
@@ -256,6 +258,7 @@ int main() {
     return 0;
 }
 ```
+<img src="/images/1-multiple_inheritance.png" alt="Example Diagram of Multiple Inheritance" width="500"/>
 
 __Example 2__: `Smartphone` class inherits from `Gadget`, `Camera`, &amp; `Storage` 3 different classes in the following code.
 ```cpp
@@ -318,8 +321,9 @@ int main() {
     return 0;
 }
 ```
+<img src="/images/2-multiple_inheritance.png" alt="Example Diagram of Multiple Inheritance" width="500"/>
 
-### HIERARCHICAL INHERITANCE
+## HIERARCHICAL INHERITANCE
 
 Multiple derived classes inherit from a single base class. Several child classes share a common parent class.
 
@@ -399,8 +403,9 @@ int main() {
     return 0;
 }
 ```
+<img src="/images/1-hierarchical_inheritance.png" alt="Example Diagram of Hierarchical Inheritance" width="500"/>
 
-### HYBRID INHERITANCE
+## HYBRID INHERITANCE
 
 A combination of two or more types of inheritance (e.g., a mix of single, multiple, and/or multilevel inheritance) in a single program or hierarchy.
 
@@ -470,3 +475,4 @@ int main() {
     return 0;
 }
 ```
+<img src="/images/1-Hybrid_inheritance.png" alt="Example Diagram of Hybrid Inheritance" width="500"/>
