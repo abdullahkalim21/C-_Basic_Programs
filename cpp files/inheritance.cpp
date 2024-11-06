@@ -38,7 +38,6 @@ class Vehicle {
         void displayInfo() {
             cout << "Vehicle's Speed: " << speed << endl;
         }
-    friend class Car;
 };
 
 // Derived class
