@@ -1,15 +1,16 @@
 # INHERITANCE
-`Inheritance` is a mechanism that allows one class (called the *__derived or child class__*) to acquire the *__properties__* (attributes/variables) and *__functions__* (methods) of another class (called the *__base class or parent class__*). It helps promote code reusability and establishes a relationship between different classes, where the *__derived class__* can inherit functionality from the *__base class__* and, if necessary, modify or extend it.
-<br>
+`Inheritance` is a mechanism that allows one class (called the _derived or child class_) to acquire the _properties_ (attributes/variables) and _functions_ (methods) of another class (called the _base class or parent class_). It helps promote code reusability and establishes a relationship between different classes, where the _derived class_ can inherit functionality from the _base class_ and, if necessary, modify or extend it.
+
+[Practical Questions](#questions-for-practice)
+
 ### *Types*
 1. [Single Inheritance](#single-inheritance)<br>
 2. [Multi-Level Inheritance](#multi-level-inheritance)<br>
 3. [Multiple Inheritance](#multiple-inheritance)<br>
 4. [Hierarchical Inheritance](#hierarchical-inheritance)<br>
 5. [Hybrid Inheritance](#hybrid-inheritance)<br>
-
-
-### SINGLE INHERITANCE
+---
+## SINGLE INHERITANCE
 
 A child class inherits from only one parent class. The child class gains all the attributes and behaviors of the single parent class.<br>
 
@@ -475,3 +476,98 @@ int main() {
 }
 ```
 <img src="/images/1-Hybrid_inheritance.png" alt="Example Diagram of Hybrid Inheritance" width="500"/>
+
+---
+## *Questions for Practice*
+### Public Inheritance
+
+_A_. You are tasked with designing a system for a transportation company.
+- There is a base class `Vehicle` with common properties like `speed` and `fuel` and methods like `start()` and `stop()`.
+- Create derived classes `Car` and `Bike` that inherit from `Vehicle`.
+- Add specific properties such as `numberOfSeats` for `Car` and `hasSidecar` for `Bike`.
+- Write a program to demonstrate how public inheritance allows the derived classes to share the behavior of the base class.
+
+
+_B_. You need to design an educational system.
+- Create a base class `Person` with attributes `name` and `age` and a method `displayInfo()`.
+- Derive `Student` and `Teacher` classes. Add `grade` for `Student` and `subject` for `Teacher`.
+- Write a program to create objects of `Student` and `Teacher`, and demonstrate how they inherit and override base class methods.
+
+### Protected Inheritance
+_A_. You are building an employee management system for a company.
+- The base class `Employee` has attributes `name`, `salary`, and `position`.
+- Use protected inheritance to create a derived class `Manager` with an additional method `calculateBonus()` that uses the `salary` of the `employee`.
+- Demonstrate how the derived class can access and manipulate the protected attributes while keeping them hidden from outside the class.
+
+_B_. A library system requires a class hierarchy for its assets.
+- Create a base class `LibraryItem` with attributes `title` and `year` (protected).
+- Use protected inheritance to derive classes `Book` and `Magazine`. Add specific attributes like `author` for `Book` and `issueNumber` for `Magazine`.
+- Write a program to demonstrate how the protected members are accessible in the derived classes but hidden from outside.
+
+### Private Inheritance
+
+_A_. You are developing a smart home system.
+- Create a base class `Appliance` with methods `turnOn()` and `turnOff()`.
+- Derive a class `SmartFan` using private inheritance, adding methods like `setSpeed()` and `getStatus()`.
+- Demonstrate how the `SmartFan` internally uses the base class's methods but doesn’t expose them to the outside world.
+
+_B_. Design a game inventory system.
+- The base class `Item` contains attributes `name` and `weight`.
+- Derive a class `Weapon` using private inheritance, adding an attribute `damage`.
+- Demonstrate how the derived class uses the functionality of the base class without exposing it directly to the main program.
+
+### Mixed Inheritance
+_A_. Design a banking system with the following hierarchy:
+- A base class `Account` with attributes `accountNumber` and `balance` and methods `deposit()` and `withdraw()`.
+- Derive `SavingsAccount` using public inheritance, adding `interestRate`.
+- Derive `LoanAccount` using protected inheritance, adding `loanAmount`.
+- Write a program to demonstrate how different types of inheritance work in this hierarchy.
+
+_B_. You are creating a university hierarchy.
+- Create a base class `University` with attributes `name` and `location`.
+- Derive `Department` using protected inheritance, adding attributes like `departmentName`.
+- Derive `Student` from `Department` using public inheritance, adding attributes like `studentName` and `rollNumber`.
+- Write a program to show multi-level inheritance and how access levels affect it.
+
+
+### Diamond Problem
+_A_. Design a music player system with the following structure:
+- A base class `Device` with a method `turnOn()`.
+- Two intermediate classes `Speaker` and `Player` derived from `Device`.
+- Create a derived class `SmartSpeaker` from both `Speaker` and `Player`.
+- Demonstrate how to resolve the diamond problem using virtual inheritance.
+
+
+### Function Overriding
+_A_. You are designing a vehicle simulation game.
+- Create a base class `Vehicle` with a method `drive()`.
+- Derive classes `Car`, `Truck`, and `Motorcycle`.
+- Override the `drive()` method in each derived class to display specific messages (e.g., "Driving a car", "Driving a truck").
+- Write a program to demonstrate polymorphism using function overriding.
+
+
+### Virtual Functions
+_A_. You are building a graphics editor.
+- Create a base class `Shape` with a virtual method `draw()`.
+- Derive classes `Circle`, `Rectangle`, and `Triangle`, overriding the `draw()` method.
+- Write a program to demonstrate runtime polymorphism by storing derived class objects in base class pointers and calling the `draw()` method.
+
+
+### Abstraction
+_A_. Develop an online payment system.
+- Create an abstract base class `Payment` with a pure virtual method `pay()`.
+- Derive classes `CreditCardPayment`, `DebitCardPayment`, and `PayPalPayment` to implement the `pay()` method.
+- Demonstrate how abstraction is used to handle multiple payment methods uniformly.
+
+### Hybrid Inheritance
+_A_. You are building an educational app.
+- Create a base class `User` with attributes `username` and `password`.
+- Derive two classes `Teacher` and `Student` from `User`.
+- Create a derived class `TeachingAssistant` that inherits both `Teacher` and `Student`.
+- Demonstrate how to resolve ambiguities in hybrid inheritance using virtual inheritance.
+
+_B_. You are building a hotel management system.
+- Create a base class `Room` with attributes `roomNumber` and `price`.
+- Derive two classes `SingleRoom` and `Suite` using public inheritance, adding attributes like `bedCount` and `hasLivingRoom`.
+- Create a derived class `VIPRoom` from `Suite` that adds an attribute `personalButler`.
+- Write a program to show multi-level inheritance and how derived classes enhance the functionality of the base class.
