@@ -10,103 +10,140 @@ void showTime() {
     char* currentTime = ctime(&now);
     cout << "Current Time: " << currentTime;
 }
-// BASIC FUNCTIONS
-// Function for Addition
-double add(double a, double b) {
-    return a + b;
-}
 
-// Function for Subtraction
-double subtract(double a, double b) {
-    return a - b;
-}
-
-// Function for Multiplication
-double multiply(double a, double b) {
-    return a * b;
-}
-
-// Function for Division
-double divide(double a, double b) {
-    if (b != 0)
-        return a / b;
-    else {
-        cout << "Error: Division by zero." << endl;
-        return NAN;
+class Calculator {
+    vector<string> history;     // Dynamic array to store history
+public:
+    Calculator() {
+        cout << "Calculator Initialized." << endl;
     }
-}
-
-// Function to calculate Power of a number
-double power(double base, double exponent) {
-    return pow(base, exponent);
-}
-
-// Function to calculate Square Root of a number
-double squareRoot(double a) {
-    if (a >= 0)
-        return sqrt(a);
-    else {
-        cout << "Error: Negative input for square root." << endl;
-        return NAN;
+    // Function for Addition
+    double add(double a, double b) {
+        double result = a + b;
+        addToHistory(to_string(a) + " + " + to_string(b) + " = " + to_string(result));
+        return result;
     }
-}
-
-// Function to calculate Logarithmic value of a radian
-double logarithm(double a) {
-    if (a > 0)
-        return log(a);
-    else {
-        cout << "Error: Logarithm of non-positive number." << endl;
-        return NAN;
+    // Function for Subtraction
+    double subtract(double a, double b) {
+        double result = a - b;
+        addToHistory(to_string(a) + " - " + to_string(b) + " = " + to_string(result));
+        return result;
     }
-}
+    // Function for Multiplication
+    double multiply(double a, double b) {
+        double result = a * b;
+        addToHistory(to_string(a) + " * " + to_string(b) + " = " + to_string(result));
+        return result;
+    }
+    // Function for Division
+    double divide(double a, double b) {
+        if (b != 0) {
+            double result = a / b;
+            addToHistory(to_string(a) + " / " + to_string(b) + " = " + to_string(result));
+            return result;
+        } else {
+            cout << "Error: Division by zero." << endl;
+            return NAN;     // Not A Number
+        }
+    }
+    // add to history
+    void addToHistory(const string& entry) {
+        history.push_back(entry);
+    }
+    // Function to Display History of previously performed operations
+    void displayHistory() {
+        if (history.size() == 0) {
+            cout << "\nNo calculations in history." << endl;
+        } else {
+            cout << "\nRecent calculations:" << endl;
+            for (int i = 0; i < history.size(); i++) {
+                cout << history[i] << endl;
+            }
+        }
+    }
+};
 
-// Function to calculate SINE value of an angle
-double sine(double a) {
-    double radian = a * M_PI / 180.0;
-    return sin(radian);
-}
+class ScientificCalculator : public Calculator {
+public:
+    ScientificCalculator() {
+        cout << "Scientific Calculator Initialized." << endl;
+    }
+    // Function to calculate Power of a number
+    double power(double base, double exponent) {
+        return pow(base, exponent);
+    }
 
-// Function to calculate COSINE value of an angle
-double cosine(double a) {
-    double radian = a * M_PI / 180.0;
-    return cos(radian);
-}
+    // Function to calculate Square Root of a number
+    double squareRoot(double a) {
+        if (a >= 0) {
+            double result = sqrt(a);
+            addToHistory("Square Root of " + to_string(a) + " = " + to_string(result));
+            return result;
+        }
+        else {
+            cout << "Error: Negative input for square root." << endl;
+            return NAN;
+        }
+    }
+
+    // Function to calculate Logarithmic value
+    double logarithm(double a) {
+        if (a > 0) {
+            double result = log(a);
+            addToHistory("Natural Log of " + to_string(a) + " = " + to_string(result));
+            return result;
+        }
+        else {
+            cout << "Error: Logarithm of non-positive number." << endl;
+            return NAN;
+        }
+    }
+
+    // Function to calculate SINE value of an angle
+    double sine(double a) {
+        double radian = a * M_PI / 180.0;
+        double result = sin(radian);
+        addToHistory("sin(" + to_string(a) + ") = " + to_string(result));
+        return result;
+    }
+
+    // Function to calculate COSINE value of an angle
+    double cosine(double a) {
+        double radian = a * M_PI / 180.0;
+        double result = cos(radian);
+        addToHistory("cos(" + to_string(a) + ") = " + to_string(result));
+        return result;
+    }
+    // Function to calculate TAN
+    double tan(double a) {
+        double radian = a * M_PI / 180.0;
+        double result = sin(radian) / cos(radian);
+        addToHistory("tan(" + to_string(a) + ") = " + to_string(result));
+        return result;
+    }
+    // Function to calculate TAN
+    double cot(double a) {
+        double radian = a * M_PI / 180.0;
+        double result = cos(radian) / sin(radian);
+        addToHistory("cot(" + to_string(a) + ") = " + to_string(result));
+        return result;
+    }
+
+};
 
 // Function to initial MENU for user
 void displayMenu() {
     cout << "\n||---------->>> Scientific Calculator <<<----------||" << endl;
-    cout << "1. Addition";
-    cout << "\t2. Subtraction";
-    cout << "\t3. Multiplication";
-    cout << "\n4. Division";
-    cout << "\t5. Power";
-    cout << "\t6. Square Root";
-    cout << "\n7. Logarithm";
-    cout << "\t8. Sine";
-    cout << "\t9. Cosine";
-    cout << "\n10. Display History";
-    cout << "\n-1. Exit" << endl;
-}
-// Function to Display History of previously performed operations
-void displayHistory(vector<string> history) {
-    if (history.size() == 0) {
-        cout << "\nNo calculations in history." << endl;
-    } else {
-        cout << "\nRecent calculations:" << endl;
-        for (int i = 0; i < history.size(); i++) {
-            cout << history[i] << endl;
-        }
-    }
+    cout << "1. Basic Operations" << endl;
+    cout << "2. Advanced Operations" << endl;
+    cout << "3. History" << endl;
+    cout << "-1. Exit" << endl;
 }
 // main function
 int main() {
+    ScientificCalculator sc_cal;
     int choice;
     double num1, num2;
-    vector<string> history;     // Dynamic array to store history
-    // Array of basic operations to avoid if-else statements clutter
-    // Each pointer in operations points to a function & each function accepts and return double values
-    double (*operations[5])(double, double) = {add, subtract, multiply, divide, power};
 
     while (true) {
         displayMenu();
@@ -118,57 +155,77 @@ int main() {
             break;
         }
 
-        if (choice >= 1 && choice <= 5) {
-            string operators[5] = {"+", "-", "*", "/", "^"};
-            cout << "Enter two numbers: ";
-            cin >> num1 >> num2;
-            double result = operations[choice - 1](num1, num2);
-            cout << "\n" << num1 << " " << operators[choice - 1] << " " << num2 << " = " << result << endl;
-            // following statement stores the performed function in history
-            history.push_back(to_string(num1) + " " + operators[choice - 1] + " " + to_string(num2) + " = " + to_string(result));
-        } else if (choice == 6) {
-            cout << "Enter a number: ";
-            cin >> num1;
-            double result = squareRoot(num1);
-            cout << "\nSquare root of " << num1 << " = " << result << endl;
-            // following statement stores the performed function in history
-            history.push_back("Square Root of " + to_string(num1) + " = " + to_string(result));
-        } else if (choice == 7) {
-            cout << "Enter a number: ";
-            cin >> num1;
-            int logChoice;
-            cout << "Select a log\n1. Natural Logarithm\t2. Base-10 Logarithm" << endl;
-            cin >> logChoice;
-            if (logChoice == 1) {
-                double result = logarithm(num1);
-                cout << "\nln of " << num1 << " = " << result << endl;
-                // following statement stores the performed function in history
-                history.push_back("ln of " + to_string(num1) + " = " + to_string(result));
-            } else if (logChoice == 2) {
-                double result = log10(num1);
-                cout << "\nlog10 of " << num1 << " = " << result << endl;
-                history.push_back("log10 of " + to_string(num1) + " = " + to_string(result));
-            } else {
-                cout << "Invalid choice. Please try again." << endl;
+        switch (choice) {
+            case 1: {
+                int secChoice;
+                cout << "\nBasic Operations:\n";
+                cout << "1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n-1. Main Menu" << endl;
+                cout << "Enter your choice: ";
+                cin >> secChoice;
+                if (secChoice == -1) {
+                    cout << "Returning to main menu." << endl;
+                } else if (secChoice >= 1 && secChoice <=4) {
+                    cout << "Enter two numbers: ";
+                    cin >> num1 >> num2;
+                    if (secChoice == 1) {
+                        cout << num1 << " + " << num2 << " = " << sc_cal.add(num1, num2) << endl;
+                    } else if (secChoice == 2) {
+                        cout << num1 << " - " << num2 << " = " << sc_cal.subtract(num1, num2) << endl;
+                    } else if (secChoice == 3) {
+                        cout << num1 << " * " << num2 << " = " << sc_cal.multiply(num1, num2) << endl;
+                    } else if (secChoice == 4) {
+                        cout << num1 << " / " << num2 << " = " << sc_cal.divide(num1, num2) << endl;
+                    }
+                } else {
+                    cout << "Invalid choice. Returning to main menu." << endl;
+                }
+                break;
             }
-        } else if (choice == 8) {
-            cout << "Enter an angle: ";
-            cin >> num1;
-            double result = sine(num1);
-            cout << "\nsin(" << num1 << ") = " << result << endl;
-            // following statement stores the performed function in history
-            history.push_back("sin(" + to_string(num1) + ") = " + to_string(result));
-        } else if (choice == 9) {
-            cout << "Enter an angle: ";
-            cin >> num1;
-            double result = cosine(num1);
-            cout << "\ncos(" << num1 << ") = " << result << endl;
-            // following statement stores the performed function in history
-            history.push_back("cos(" + to_string(num1) + ") = " + to_string(result));
-        } else if (choice == 10) {      // display whatever the previous operations have been performed
-            displayHistory(history);
-        } else {        // exceptional case if user enters any number other than MENU
-            cout << "Invalid choice. Please try again." << endl;
+            case 2: {
+                int advancedChoice;
+                cout << "\nAdvanced Operations:\n";
+                cout << "1. Power\n2. Square Root\n3. Sine\n4. Cosine\n5. Tan\n6. Cot" << endl;
+                cout << "Enter your choice: ";
+                cin >> advancedChoice;
+
+                if (advancedChoice == 1) {
+                    cout << "Enter base and exponent: ";
+                    cin >> num1 >> num2;
+                    cout << num1 << " ^ " << num2 << " = " << sc_cal.power(num1, num2) << endl;
+                } else if (advancedChoice == 2) {
+                    cout << "Enter a number: ";
+                    cin >> num1;
+                    cout << "Square Root of " << num1 << " = " << sc_cal.squareRoot(num1) << endl;
+                } else if (advancedChoice == 3) {
+                    cout << "Enter an angle (degrees): ";
+                    cin >> num1;
+                    cout << "sin(" << num1 << ") = " << sc_cal.sine(num1) << endl;
+                } else if (advancedChoice == 4) {
+                    cout << "Enter an angle (degrees): ";
+                    cin >> num1;
+                    cout << "cos(" << num1 << ") = " << sc_cal.cosine(num1) << endl;
+                } else if (advancedChoice == 5) {
+                    cout << "Enter an angle (degrees): ";
+                    cin >> num1;
+                    cout << "tan(" << num1 << ") = " << sc_cal.tan(num1) << endl;
+                } else if (advancedChoice == 6) {
+                    cout << "Enter an angle (degrees): ";
+                    cin >> num1;
+                    cout << "cot(" << num1 << ") = " << sc_cal.cot(num1) << endl;
+                } else {
+                    cout << "Invalid choice. Returning to main menu." << endl;
+                }
+                break;
+            }
+            case 3: {       // Display History
+                sc_cal.displayHistory();
+                break;
+            }
+        
+            default: {
+                cout << "Invalid choice. Returning to main menu." << endl;
+                break;
+            }
         }
     }
     // Shows current time when user exits program
