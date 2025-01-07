@@ -1,8 +1,9 @@
-#include <iostream>
-#include <cmath>
-#include <string>
-#include <vector>
-#include <ctime>
+#include <iostream>     	// cin, cout
+#include <cmath>            // mathematical functions (sin, cos, sqrt, pow)
+#include <string>           // string and it's operations (converting int to string)
+#include <vector>           // For Dynamic Arrays like to store history
+#include <ctime>            // to display current time
+#include <fstream>          // to work with text file
 using namespace std;
 // Show Current Time
 void showTime() {
@@ -16,6 +17,10 @@ class Calculator {
 public:
     Calculator() {
         cout << "Calculator Initialized." << endl;
+    }
+    virtual ~Calculator() {
+        saveHistoryToFile();
+        cout << "Calculator Closed!" << endl;
     }
     // Function for Addition
     double add(double a, double b) {
@@ -50,6 +55,16 @@ public:
     void addToHistory(const string& entry) {
         history.push_back(entry);
     }
+    // File Handling
+    void saveHistoryToFile() {
+        ofstream file("history.txt");
+        if (file.is_open()) {
+            for (const auto& entry : history) {
+                file << entry << endl;
+            }
+            file.close();
+        }
+    }
     // Function to Display History of previously performed operations
     void displayHistory() {
         if (history.size() == 0) {
@@ -72,7 +87,6 @@ public:
     double power(double base, double exponent) {
         return pow(base, exponent);
     }
-
     // Function to calculate Square Root of a number
     double squareRoot(double a) {
         if (a >= 0) {
@@ -121,14 +135,27 @@ public:
         addToHistory("tan(" + to_string(a) + ") = " + to_string(result));
         return result;
     }
-    // Function to calculate TAN
+    // Function to calculate COT
     double cot(double a) {
         double radian = a * M_PI / 180.0;
         double result = cos(radian) / sin(radian);
         addToHistory("cot(" + to_string(a) + ") = " + to_string(result));
         return result;
     }
-
+    double sin_over_cos(double a, double b) {
+        double radian_a = a * M_PI / 180.0;
+        double radian_b = b * M_PI / 180.0;
+        double result = sin(radian_a) / cos(radian_b);
+        addToHistory("sin(" + to_string(a) + ") / cos(" + to_string(b) + ") = " + to_string(result));
+        return result;
+    }
+    double cos_over_sin(double a, double b) {
+        double radian_a = a * M_PI / 180.0;
+        double radian_b = b * M_PI / 180.0;
+        double result = cos(radian_a) / sin(radian_b);
+        addToHistory("sin(" + to_string(a) + ") / cos(" + to_string(b) + ") = " + to_string(result));
+        return result;
+    }
 };
 
 // Function to initial MENU for user
@@ -184,7 +211,7 @@ int main() {
             case 2: {
                 int advancedChoice;
                 cout << "\nAdvanced Operations:\n";
-                cout << "1. Power\n2. Square Root\n3. Sine\n4. Cosine\n5. Tan\n6. Cot" << endl;
+                cout << "1. Power\n2. Square Root\n3. Sine\n4. Cosine\n5. Tan\n6. Cot\n7. Sin / Cos\n8. Cos / Sin" << endl;
                 cout << "Enter your choice: ";
                 cin >> advancedChoice;
 
@@ -212,6 +239,14 @@ int main() {
                     cout << "Enter an angle (degrees): ";
                     cin >> num1;
                     cout << "cot(" << num1 << ") = " << sc_cal.cot(num1) << endl;
+                } else if (advancedChoice == 7) {
+                    cout << "Enter two angles (angles for sin & cos): ";
+                    cin >> num1 >> num2;
+                    cout << "sin(" << num1 << ") / cos (" << num2 << ") = " << sc_cal.sin_over_cos(num1, num2) << endl;
+                } else if (advancedChoice == 8) {
+                    cout << "Enter an angle (angles for cos & sin): ";
+                    cin >> num1 >> num2;
+                    cout << "cos(" << num1 << ") / sin (" << num2 << ") = " << sc_cal.cos_over_sin(num1, num2) << endl;
                 } else {
                     cout << "Invalid choice. Returning to main menu." << endl;
                 }
