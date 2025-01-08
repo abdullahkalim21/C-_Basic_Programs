@@ -4,6 +4,7 @@
 #include <vector>           // For Dynamic Arrays like to store history
 #include <ctime>            // to display current time
 #include <fstream>          // to work with text file
+#include <stdexcept>        // for runtime_error
 using namespace std;
 
 // Show Current Time
@@ -78,13 +79,16 @@ public:
     }
 
     virtual double divide(double a, double b) {
-        if (b != 0) {
+        try {
+            if (b == 0) {
+                throw runtime_error("Error: Division by zero.");
+            }
             double result = a / b;
             historyManager.addToHistory(to_string(a) + " / " + to_string(b) + " = " + to_string(result));
             return result;
-        } else {
-            cout << "Error: Division by zero." << endl;
-            return NAN; // Not A Number
+        }
+        catch(const exception& e) {
+            cerr << e.what() << endl;
         }
     }
 
@@ -209,89 +213,103 @@ int main() {
         displayMenu();
         cout << "Enter your choice: ";
         cin >> choice;
-        if (choice == -1) {
-            cout << "Exiting the program. Goodbye!" << endl;
-            break;
-        }
+        try {
+            if (choice < -1 || choice > 4) {
+                throw invalid_argument("Invalid choice. Please select a valid option.");
+            }
+            if (choice == -1) {
+                cout << "Exiting the program. Goodbye!" << endl;
+                break;
+            }
+            switch (choice) {
+                case 1: {
+                    int secChoice;
+                    cout << "\nBasic Operations:" << endl;
+                    cout << "1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n-1. Main Menu" << endl;
+                    cout << "Enter your choice: ";
+                    cin >> secChoice;
+                    if (secChoice == -1) {
+                        cout << "Returning to main menu." << endl;
+                    } else {
+                        cout << "Enter two numbers: ";
+                        cin >> num1 >> num2;
+                        if (secChoice == 1) {
+                            cout << num1 << " + " << num2 << " = " << sc_cal.add(num1, num2) << endl;
+                        } else if (secChoice == 2) {
+                            cout << num1 << " - " << num2 << " = " << sc_cal.subtract(num1, num2) << endl;
+                        } else if (secChoice == 3) {
+                            cout << num1 << " * " << num2 << " = " << sc_cal.multiply(num1, num2) << endl;
+                        } else if (secChoice == 4) {
+                            cout << num1 << " / " << num2 << " = " << sc_cal.divide(num1, num2) << endl;
+                        } else {
+                            cout << "Invalid choice. Returning to main menu." << endl;
+                        }
+                    }
+                    break;
+                }
+                case 2: {
+                    int advancedChoice;
+                    cout << "\nAdvanced Operations:" << endl;
+                    cout << "1. Power\n2. Square Root\n3. Sine\n4. Cosine\n5. Tan\n6. Cot\n7. Sin / Cos\n8. Cos / Sin" << endl;
+                    cout << "Enter your choice: ";
+                    cin >> advancedChoice;
 
-        switch (choice) {
-            case 1: {
-                int secChoice;
-                cout << "\nBasic Operations:" << endl;
-                cout << "1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n-1. Main Menu" << endl;
-                cout << "Enter your choice: ";
-                cin >> secChoice;
-                if (secChoice == -1) {
-                    cout << "Returning to main menu." << endl;
-                } else {
-                    cout << "Enter two numbers: ";
-                    cin >> num1 >> num2;
-                    if (secChoice == 1) {
-                        cout << num1 << " + " << num2 << " = " << sc_cal.add(num1, num2) << endl;
-                    } else if (secChoice == 2) {
-                        cout << num1 << " - " << num2 << " = " << sc_cal.subtract(num1, num2) << endl;
-                    } else if (secChoice == 3) {
-                        cout << num1 << " * " << num2 << " = " << sc_cal.multiply(num1, num2) << endl;
-                    } else if (secChoice == 4) {
-                        cout << num1 << " / " << num2 << " = " << sc_cal.divide(num1, num2) << endl;
+                    if (advancedChoice == 1) {
+                        cout << "Enter base and exponent: ";
+                        cin >> num1 >> num2;
+                        cout << num1 << " ^ " << num2 << " = " << sc_cal.power(num1, num2) << endl;
+                    } else if (advancedChoice == 2) {
+                        cout << "Enter a number: ";
+                        cin >> num1;
+                        cout << "Square Root of " << num1 << " = " << sc_cal.squareRoot(num1) << endl;
+                    } else if (advancedChoice == 3) {
+                        cout << "Enter an angle (degrees): ";
+                        cin >> num1;
+                        cout << "sin(" << num1 << ") = " << sc_cal.sine(num1) << endl;
+                                    } else if (advancedChoice == 4) {
+                        cout << "Enter an angle (degrees): ";
+                        cin >> num1;
+                        cout << "cos(" << num1 << ") = " << sc_cal.cosine(num1) << endl;
+                    } else if (advancedChoice == 5) {
+                        cout << "Enter an angle (degrees): ";
+                        cin >> num1;
+                        cout << "tan(" << num1 << ") = " << sc_cal.tan(num1) << endl;
+                    } else if (advancedChoice == 6) {
+                        cout << "Enter an angle (degrees): ";
+                        cin >> num1;
+                        cout << "cot(" << num1 << ") = " << sc_cal.cot(num1) << endl;
+                    } else if (advancedChoice == 7) {
+                        cout << "Enter two angles (degrees) for sin(a) / cos(b): ";
+                        cin >> num1 >> num2;
+                        cout << "sin(" << num1 << ") / cos(" << num2 << ") = " << sc_cal.sin_over_cos(num1, num2) << endl;
+                    } else if (advancedChoice == 8) {
+                        cout << "Enter two angles (degrees) for cos(a) / sin(b): ";
+                        cin >> num1 >> num2;
+                        cout << "cos(" << num1 << ") / sin(" << num2 << ") = " << sc_cal.cos_over_sin(num1, num2) << endl;
                     } else {
                         cout << "Invalid choice. Returning to main menu." << endl;
                     }
+                    break;
                 }
-                break;
+                case 3:
+                    sc_cal.displayHistory();
+                    break;
+                case 4:
+                    cout << "Total number of calculators created: " << Calculator::getCalculatorCount() << endl;
+                    break;
             }
-            case 2: {
-                int advancedChoice;
-                cout << "\nAdvanced Operations:" << endl;
-                cout << "1. Power\n2. Square Root\n3. Sine\n4. Cosine\n5. Tan\n6. Cot\n7. Sin / Cos\n8. Cos / Sin" << endl;
-                cout << "Enter your choice: ";
-                cin >> advancedChoice;
-
-                if (advancedChoice == 1) {
-                    cout << "Enter base and exponent: ";
-                    cin >> num1 >> num2;
-                    cout << num1 << " ^ " << num2 << " = " << sc_cal.power(num1, num2) << endl;
-                } else if (advancedChoice == 2) {
-                    cout << "Enter a number: ";
-                    cin >> num1;
-                    cout << "Square Root of " << num1 << " = " << sc_cal.squareRoot(num1) << endl;
-                } else if (advancedChoice == 3) {
-                    cout << "Enter an angle (degrees): ";
-                    cin >> num1;
-                    cout << "sin(" << num1 << ") = " << sc_cal.sine(num1) << endl;
-                                } else if (advancedChoice == 4) {
-                    cout << "Enter an angle (degrees): ";
-                    cin >> num1;
-                    cout << "cos(" << num1 << ") = " << sc_cal.cosine(num1) << endl;
-                } else if (advancedChoice == 5) {
-                    cout << "Enter an angle (degrees): ";
-                    cin >> num1;
-                    cout << "tan(" << num1 << ") = " << sc_cal.tan(num1) << endl;
-                } else if (advancedChoice == 6) {
-                    cout << "Enter an angle (degrees): ";
-                    cin >> num1;
-                    cout << "cot(" << num1 << ") = " << sc_cal.cot(num1) << endl;
-                } else if (advancedChoice == 7) {
-                    cout << "Enter two angles (degrees) for sin(a) / cos(b): ";
-                    cin >> num1 >> num2;
-                    cout << "sin(" << num1 << ") / cos(" << num2 << ") = " << sc_cal.sin_over_cos(num1, num2) << endl;
-                } else if (advancedChoice == 8) {
-                    cout << "Enter two angles (degrees) for cos(a) / sin(b): ";
-                    cin >> num1 >> num2;
-                    cout << "cos(" << num1 << ") / sin(" << num2 << ") = " << sc_cal.cos_over_sin(num1, num2) << endl;
-                } else {
-                    cout << "Invalid choice. Returning to main menu." << endl;
-                }
-                break;
-            }
-            case 3:
-                sc_cal.displayHistory();
-                break;
-            case 4:
-                cout << "Total number of calculators created: " << Calculator::getCalculatorCount() << endl;
-                break;
-            default:
-                cout << "Invalid choice. Please select a valid option." << endl;
+        }
+        catch (const runtime_error& e) {
+            cerr << "Runtime error: " << e.what() << endl;
+        }
+        catch (const domain_error& e) {
+            cerr << "Domain Error: " << e.what() << endl;
+        }
+        catch (const invalid_argument& e) {
+            cerr << "Invalid argument: " << e.what() << endl;
+        }
+        catch (...) {
+            cerr << "An unexpected error occurred: " << endl;
         }
     }
     showTime();
