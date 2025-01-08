@@ -160,14 +160,14 @@ public:
 
     double tan(double a) {
         double radian = a * M_PI / 180.0;
-        double result = tan(radian);
+        double result = sin(radian) / cos(radian);
         historyManager.addToHistory("tan(" + to_string(a) + ") = " + to_string(result));
         return result;
     }
 
     double cot(double a) {
         double radian = a * M_PI / 180.0;
-        double result = 1 / tan(radian);
+        double result = cos(radian) / sin(radian);
         historyManager.addToHistory("cot(" + to_string(a) + ") = " + to_string(result));
         return result;
     }
